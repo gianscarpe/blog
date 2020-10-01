@@ -1,0 +1,168 @@
+#+STARTUP: indent
+#+EXPORT_DESCRIPTION: Exporting to Hugo's Blackfriday Markdown from Orgmode
+#+HUGO_BASE_DIR: ../
+#+HUGO_SECTION: ./
+#+hugo_auto_set_lastmod: t
+* Event cameras
+** COMMENT Notes
+   - WHO: Open post about event-cameras to attract researchers and computer
+     vision practitioners 
+   - WHY: more people working with event-cameras, more data, more cooperation,
+     and more fun!
+   - *Central idea*: present event-cameras and send a message to the computer
+     vision community; join us, and help us build the next opencv for
+     event-cameras
+*** TODO
+   - [ ] Pic of difficulty 
+
+** DONE A gentle introduction to event cameras
+:PROPERTIES:
+:EXPORT_FILE_NAME: introduction
+:EXPORT_HUGO_MENU: :menu "main"
+:END:
+*** Introduction
+Can computer see like we humans do? Computer vision is a joint branch of machine
+learning, statistics, and computer science. It's main goal is providing
+artificial agents (e.g., robots, autonomous cars, drones, surveilling systems,
+... ) the ability to *see* and *understand* the environment. Deep learning and
+machine learning are contributing enormeously to computer vision. Open-source
+implementations of the recent literature (e.g., torchvision, tensorflow,
+recently opencv) demonstrate that deep learning applications are mature and
+ready for industrial applications. Pic [..] is an (abused) example of how fast
+the community has grown during the past decade. Today, artificial agent perform
+better than human on huge set of classes.
+
+Is it all? Has computer vision reached complete maturity? I believe it's not.
+
+Standard cameras suffer of major intrinsics issues which can hardly be solved -
+high bandwidth, high power consumption, low dynamic range. Humans don't see
+images at fixed frame rates. We process only the *changes* of our sourrindings,
+avoiding to process again and again the statical part of the scene. Our approach
+is faster and more efficient, as we don't process the same information multiple
+times.
+
+I praise the human vision system because Nature has always been a source of
+inspiration for engineering. Could we rethink computer vision, taking source
+from Nature?
+
+*Event-cameras* (cameras based on *events*) could be the answer. In the
+following paragraphs, I try to convince the reader of the potentials of
+event-based vision applications. This article is structure as follows. Section
+[[sec:event-cameras]] discusses event-cameras, their principle of operations, and
+thxeir motivation. Section [[sec:discussion]] reports some interesting solutions to
+the main challenges of event-based vision. Section [[sec:conclusion]] concludes with
+a summary and propose paths of research.
+
+*** Event-cameras
+#+name: sec:event-cameras
+Traditional cameras collect light and, at fixed frame-rate, output a single
+frame. This approach suffers, however, of severe limitations. If part of the
+scene is static, each frame contains the *same* pixel information, and the data
+becomes redundant. Consequently, standard cameras with high frame-rate produce a
+prohibitive large amount of throughput---most of which redundant if no change
+occurs---that no algorithm can efficiently process. These limitation leads to
+other common issues in standard computer vision: narrowed dynamic range and
+blooming. Each standard image is *digitalized* and stored with a finite range of
+values (e.g., 256 values per channel). If the light varies abruptly in the
+scene, the digitalization process loses much of the information to fit into the
+fixed range. Consequently, traditional cameras have a narrow dynamic range,
+especially in automotive applications. For example, the sun in front of the
+driver is a problematic issue for a standard camera. Moreover, if the incoming
+light is too much, as in the after-mentioned example, the pixels saturate and
+the resulting image is *burned*.
+
+The amateur photographer is aware of these issues and can use these
+characteristics to create more artistic photo. On the other hand, computer
+vision algorithms must be *reliable*, not artistic, and their reliability is
+under attack in dynamic scenarios or when sources of lights are present in the
+scene.
+
+Can we rethink computer vision?
+
+This question lead us to the central idea of event-cameras and its
+paradigm. Event-cameras capture *change of intensities* (also called events) in
+an asynchronous manner. Each event has 4 values: the position tuple on the image
+plane (x, y), the polarity of the change (positive or negative), and the
+timestamp of the its occurrence.
+
+**** Points:
+   - DAVIS vs DVS vs ATIS
+   - Event-cameras have many advantages, but also disadvantages
+
+**** Pros and cons
+
+   - Advantages
+     - low bandwidth: train on sparse data requires less calculation and,
+       finally, less energy
+     - high dynamic range: when the pixel of a standard camera receives too much
+       light intensity (e.g., if a camera is mounted on a car heading west at
+       dawn) [IMG], it flows to the near pixels - blooming effect. Pixels of
+       event-cameras don't store intensity values: events are spiked immediately
+       when a threshold is reached. No blooming happens, and dynamic range is
+       extremely high.
+     - high speed: standard cameras transmit frame at a fixed rate. On the other
+       hand, event-cameras are asynchronous; when an event occured, it's
+       immediately transmitted. A sequence of events (also called train of
+       events) can contain up to 10.000 events per second. Sony and Samsung have
+       recently entered the field of event-cameras production; therefore, we
+       expect the events rate to rise up to 1 MHz/s in the future.
+       - Event-camera hardware is well suited for transmitting high events rate:
+         even if we point an event-camera directly to the sun, the bus doesn't
+         overflow
+     - Event-cameras detect only the movements; this information enables fast
+       intrusion monitoring and tracking cite:Rodriguez_Gomez_2020, even in dark
+       environment. While the scene is static, no events occur and
+       energy-preserving techniques can be exploited. Moreover, events data
+       preserve privacy of the monitored space, because no subjects' details
+       (e.g., face, eyes, and so on) are captured. Major competitors (e.g.,
+       Samsung [[https://www.samsung.com/au/smart-home/smartthings-vision-u999/]])
+       are exploring low-cost event-based applications for intrusion detection.
+       
+   - Disadvantages
+     - New way of thinking about images; we can group events together and use
+         events as standard frames. Events frames can be stacked in tensors and
+         used as input for synchronous deep learning models (e.g., CNN, RNN,
+         ...). This approach, however, increase bandwidth and redondancy, and
+         its benefits are limited compared to standard cameras.
+     - Asynchronous machine learning models (SNN), and sparse CNN
+         cite:MessikommerEvent-basedNetworks are intersting path of research;
+     - Event-cameras capture changes of the scene. If the scene is static, the
+       only events are noise!
+
+*** Can we rethink computer vision?
+#+name: sec:discussion
+   - How can we exploit event-cameras we small dataset, especially since it's
+     difficult to collect reliable labels with frame rate comparable to
+     event-cameras?
+     - Open question in event-cameras research. We need more data
+     - We can adopt approaches from *domain adaptation* and train on *simulated
+       dataset*
+     - Simulation could be a game changer in event-base vision; we need
+       standardize simulators with easy-to-use interfaces
+     - Scaramuzza developed and open-source simulator. This could be exploit to
+       generate huge amount of publicly available da taset, both with complete
+       simulation or by converting standard computer vision dataset to events
+     - Results reached by Scaramuzza: reconstruction
+   - Software: open-source software. What about an opencv for event-cameras? A of
+     software is collected by RPG Zurich. Hopefully, we'll have a
+     well-engineered open-source library to work with event-cameras. Prophesee
+     already has its SDK, but it's limited to its cameras and it's not publicly
+     accessible
+
+*** Conclusion
+#+name: sec:conclusion
+We presented event-cameras and showed their advantages and their limits. We
+discuss how and in what measures event-cameras could change computer vision
+applications. In particular, we focused on application that necessistates low
+bandwidth, high acquisition rates, and low power consumption. The range of
+applications of event-camera is a broad one: from space applications, in which
+low energy consumption is the key to pack lighter batteries and ultimately save
+millions on budget, to autonomous driving, where blurring and overflowing are
+still dangerous for the driver. The path toward exploiting event-based cameras
+is clear. Realistic and easy-to-use simulators could save time and energy in
+collecting data. A well-engineered event-based vision package, lets call it
+OpenEV, would certaintly increase the interest of industries and practitionares,
+especially if big players were backing the project (we'll se, Samsung and Sony
+have already shown their interest). The reader is also referred to
+cite:Gallego_2020 for a more exhaustive and formal discussion on event-based
+vision.

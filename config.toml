@@ -1,0 +1,6 @@
+baseURL = "https://blog.scarpellini.dev"
+title = "My blog"
+theme = "cactus"
+
+[params]
+  colortheme = "white" # light, light, white, or classic
