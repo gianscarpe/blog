@@ -4,7 +4,7 @@ paginate: 5
 theme: hugo-PaperMod
 
 enableRobotsTXT: true
-buildDrafts: false
+buildDrafts: true
 buildFuture: false
 buildExpored: false
 
@@ -14,6 +14,20 @@ minify:
   disableXML: true
   minifyOutput: true
 
+
+menu:
+  main:
+    - name: Tags
+      url: /tags/
+      weight: 10  
+    - name: Posts
+      url: /posts/
+      weight: 1 
+    - name: Research
+      url: /research/
+      weight: 2
+
+  
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: My blog
@@ -30,7 +44,7 @@ params:
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: ExampleSite
+    title: My blog
     # imageUrl: '<img location>'
     # imageTitle: my image
     buttons:
@@ -38,12 +52,13 @@ params:
         url: posts
       - name: Tags
         url: tags
+      - name: Research
+        url: research
 
-  # home-info mode
   homeInfoParams:
-    Title: Hi there
-    Content: "Welcome to my blog \U0001F44B"
-
+        Title: Hi there wave
+        Content: Can be Info, links, about...
+            
   socialIcons:
     - name: github
       url: 'https://github.com/gianscarpe'

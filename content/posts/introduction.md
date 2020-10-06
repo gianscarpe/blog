@@ -1,18 +1,15 @@
 +++
 title = "A gentle introduction to event cameras"
 author = ["Gianluca Scarpellini"]
-lastmod = 2020-10-06T20:49:09+02:00
+lastmod = 2020-10-06T21:52:58+02:00
 tags = ["introduction"]
-draft = false
+draft = true
 weight = 2001
 noauthor = true
 nocomment = true
 nodate = true
 nopaging = true
 noread = true
-[menu.main]
-  weight = 2001
-  identifier = "a-gentle-introduction-to-event-cameras"
 +++
 
 #### Introduction {#introduction}
@@ -118,7 +115,7 @@ can be stacked in tensors and used as input for synchronous deep learning models
 redondancy, and its benefits are limited compared to standard cameras.
 
 -   Asynchronous machine learning models (SNN), and sparse CNN
-    ([Messikommer et al., n.d.](#orgc2571fa)) are intersting path of research;
+    ([Messikommer et al., n.d.](#org95b93c8)) are intersting path of research;
 -   Event-cameras capture changes of the scene.
 -   How can we exploit event-cameras we small dataset, especially since it's
     difficult to collect reliable labels with frame rate comparable to
@@ -154,12 +151,12 @@ collecting data. A well-engineered event-based vision package, lets call it
 OpenEV, would certaintly increase the interest of industries and practitionares,
 especially if big players were backing the project (we'll se, Samsung and Sony
 have already shown their interest). The reader is also referred to
-([Gallego et al. 2020](#org2e32fec)) for a more exhaustive and formal discussion on event-based
+([Gallego et al. 2020](#orgd8a136c)) for a more exhaustive and formal discussion on event-based
 vision.
 
 
 ## Bibliography {#bibliography}
 
-<a id="org2e32fec"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>.
+<a id="orgd8a136c"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>.
 
-<a id="orgc2571fa"></a>Messikommer, Nico, Daniel Gehrig, Antonio Loquercio, and Davide Scaramuzza. n.d. “Event-Based Asynchronous Sparse Convolutional Networks.” <https://youtu.be/LauQ6LWTkxM?t=4>.
+<a id="org95b93c8"></a>Messikommer, Nico, Daniel Gehrig, Antonio Loquercio, and Davide Scaramuzza. n.d. “Event-Based Asynchronous Sparse Convolutional Networks.” <https://youtu.be/LauQ6LWTkxM?t=4>.

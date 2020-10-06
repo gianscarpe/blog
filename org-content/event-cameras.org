@@ -4,12 +4,11 @@
 #+HUGO_SECTION: posts
 #+hugo_auto_set_lastmod: t
 * Event-cameras                                                
-** A gentle introduction to event cameras                :introduction:
+** TODO A gentle introduction to event cameras                :introduction:
 :PROPERTIES:
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :noauthor true :nocomment true :nodate true :nopaging true :noread true
 :EXPORT_HUGO_WEIGHT: auto
 :EXPORT_FILE_NAME: introduction
-:EXPORT_HUGO_MENU: :menu "main"
 :END:
 *** Introduction
 Can computer see like we humans do? Computer vision is a joint branch of machine
@@ -150,7 +149,7 @@ vision.
 ** TODO Event-based monocular Human Pose Estimation: what I learned and the work ahead 
 :PROPERTIES:
 :EXPORT_FILE_NAME: thesis
-:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_SECTION: research
 :END:
 * COMMENT Notes
    - WHO: Open post about event-cameras to attract researchers and computer
