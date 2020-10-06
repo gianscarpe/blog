@@ -1,10 +1,10 @@
 #+STARTUP: indent
 #+AUTHOR: Gianluca Scarpellini
 #+HUGO_BASE_DIR: ../
-#+HUGO_SECTION: ./
+#+HUGO_SECTION: posts
 #+hugo_auto_set_lastmod: t
 * Event-cameras                                                
-** A gentle introduction to event cameras                
+** A gentle introduction to event cameras                :introduction:
 :PROPERTIES:
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :noauthor true :nocomment true :nodate true :nopaging true :noread true
 :EXPORT_HUGO_WEIGHT: auto
