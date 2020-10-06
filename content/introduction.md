@@ -1,8 +1,14 @@
 +++
 title = "A gentle introduction to event cameras"
 author = ["Gianluca Scarpellini"]
-lastmod = 2020-09-30T19:36:23+02:00
+lastmod = 2020-10-06T19:39:30+02:00
 draft = false
+weight = 2001
+noauthor = true
+nocomment = true
+nodate = true
+nopaging = true
+noread = true
 [menu.main]
   weight = 2001
   identifier = "a-gentle-introduction-to-event-cameras"
@@ -36,16 +42,14 @@ from Nature?
 
 **Event-cameras** (cameras based on **events**) could be the answer. In the
 following paragraphs, I try to convince the reader of the potentials of
-event-based vision applications. This article is structure as follows. Section
-[1](#orgeb24131) discusses event-cameras, their principle of operations, and
-thxeir motivation. Section [1](#org98fed27) reports some interesting solutions to
-the main challenges of event-based vision. Section [1](#org14dbf12) concludes with
-a summary and propose paths of research.
+event-based vision applications. This article is structure as follows. We
+present [event-cameras](/introduction#event-cameras), their principle of operations, and their motivation. We
+[discuss](/introduction#discussion) some interesting solutions to the main challenges of event-based
+vision. Finally, we give our [conclusions](/introduction#conclusion) with a summary and propose paths of
+research.
 
 
 #### Event-cameras {#event-cameras}
-
-<a id="orgeb24131"></a>
 
 Traditional cameras collect light and, at fixed frame-rate, output a single
 frame. This approach suffers, however, of severe limitations. If part of the
@@ -75,60 +79,46 @@ This question lead us to the central idea of event-cameras and its
 paradigm. Event-cameras capture **change of intensities** (also called events) in
 an asynchronous manner. Each event has 4 values: the position tuple on the image
 plane (x, y), the polarity of the change (positive or negative), and the
-timestamp of the its occurrence.
+timestamp of the its occurrence. This paradigm shift leads to some interesting
+advantages. First of all, since each pixel work independently, event-cameras are
+more robust against strong light changes. When the pixel of a standard camera
+receives too much light intensity (e.g., if a camera is mounted on a car heading
+west at dawn), it "flows" into the neighborhood pixels (**blooming effect**). On
+the other hand, pixels of event-cameras don't store intensity values: events are
+spiked immediately when a threshold is reached. No blooming happens, and dynamic
+range is extremely high (140 dB vs 60 dB of traditional cameras). As you can
+imagine, if each pixel transmit **only** the intensity changes, the
+bandwidth---the amount of transmitted data---stays very low, while the
+rate---the speed of data transmission---grows over 1 million events per
+second. Consequently, events paradigm is for vision what oil is for energy:
+efficient, rapid, and flexible. These interesting characteristics made
+event-cameras the best available solution for robotics platform, intrusion
+detection, and fast movement tracking. Events data preserve privacy of the
+monitored space as well, because no subjects' details (e.g., face, eyes, and so
+on) are captured. Major competitors (e.g., Samsung
+<https://www.samsung.com/au/smart-home/smartthings-vision-u999/>) are exploring
+low-cost event-based applications for intrusion detection.
 
-<!--list-separator-->
+Where do the disadvantages lay?
 
--  Points:
-
-    -   DAVIS vs DVS vs ATIS
-    -   Event-cameras have many advantages, but also disadvantages
-
-<!--list-separator-->
-
--  Pros and cons
-
-    -   Advantages
-        -   low bandwidth: train on sparse data requires less calculation and,
-            finally, less energy
-        -   high dynamic range: when the pixel of a standard camera receives too much
-            light intensity (e.g., if a camera is mounted on a car heading west at
-            dawn) [IMG], it flows to the near pixels - blooming effect. Pixels of
-            event-cameras don't store intensity values: events are spiked immediately
-            when a threshold is reached. No blooming happens, and dynamic range is
-            extremely high.
-        -   high speed: standard cameras transmit frame at a fixed rate. On the other
-            hand, event-cameras are asynchronous; when an event occured, it's
-            immediately transmitted. A sequence of events (also called train of
-            events) can contain up to 10.000 events per second. Sony and Samsung have
-            recently entered the field of event-cameras production; therefore, we
-            expect the events rate to rise up to 1 MHz/s in the future.
-            -   Event-camera hardware is well suited for transmitting high events rate:
-                even if we point an event-camera directly to the sun, the bus doesn't
-                overflow
-        -   Event-cameras detect only the movements; this information enables fast
-            intrusion monitoring and tracking ([Rodriguez-Gomez et al. 2020](#org016d280)), even in dark
-            environment. While the scene is static, no events occur and
-            energy-preserving techniques can be exploited. Moreover, events data
-            preserve privacy of the monitored space, because no subjects' details
-            (e.g., face, eyes, and so on) are captured. Major competitors (e.g.,
-            Samsung <https://www.samsung.com/au/smart-home/smartthings-vision-u999/>)
-            are exploring low-cost event-based applications for intrusion detection.
-
-    -   Disadvantages
-        -   New way of thinking about images; we can group events together and use
-            events as standard frames. Events frames can be stacked in tensors and
-            used as input for synchronous deep learning models (e.g., CNN, RNN,
-            ...). This approach, however, increase bandwidth and redondancy, and
-            its benefits are limited compared to standard cameras.
-        -   Asynchronous machine learning models (SNN), and sparse CNN
-            ([Messikommer et al., n.d.](#orga1fd971)) are intersting path of research;
-        -   Event-cameras capture changes of the scene. If the scene is static, the
-            only events are noise!
+Event-cameras detect only the movements and transmit asynchronous data. If the
+scene is static, like in a beautiful mountain panorama, the only events are
+noise. This new way of imaging makes events data incompatible with existing
+computer vision applications. Moreover, deep learning models rely on
+**synchronous** tensor representation, therefore even the **deep learning
+revolution** is not directly available for event cameras.
 
 
-#### Can we rethink computer vision? {#can-we-rethink-computer-vision}
+#### Discussion {#discussion}
 
+; we can group events together and use events as standard frames. Events frames
+can be stacked in tensors and used as input for synchronous deep learning models
+(e.g., CNN, RNN, ...). This approach, however, increase bandwidth and
+redondancy, and its benefits are limited compared to standard cameras.
+
+-   Asynchronous machine learning models (SNN), and sparse CNN
+    ([Messikommer et al., n.d.](#org7f61405)) are intersting path of research;
+-   Event-cameras capture changes of the scene.
 -   How can we exploit event-cameras we small dataset, especially since it's
     difficult to collect reliable labels with frame rate comparable to
     event-cameras?
@@ -150,8 +140,6 @@ timestamp of the its occurrence.
 
 #### Conclusion {#conclusion}
 
-<a id="org14dbf12"></a>
-
 We presented event-cameras and showed their advantages and their limits. We
 discuss how and in what measures event-cameras could change computer vision
 applications. In particular, we focused on application that necessistates low
@@ -165,14 +153,12 @@ collecting data. A well-engineered event-based vision package, lets call it
 OpenEV, would certaintly increase the interest of industries and practitionares,
 especially if big players were backing the project (we'll se, Samsung and Sony
 have already shown their interest). The reader is also referred to
-([Gallego et al. 2020](#org3ca2892)) for a more exhaustive and formal discussion on event-based
+([Gallego et al. 2020](#orgf330bc2)) for a more exhaustive and formal discussion on event-based
 vision.
 
 
 ## Bibliography {#bibliography}
 
-<a id="org3ca2892"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>.
+<a id="orgf330bc2"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>.
 
-<a id="orga1fd971"></a>Messikommer, Nico, Daniel Gehrig, Antonio Loquercio, and Davide Scaramuzza. n.d. “Event-Based Asynchronous Sparse Convolutional Networks.” <https://youtu.be/LauQ6LWTkxM?t=4>.
-
-<a id="org016d280"></a>Rodriguez-Gomez, J.P., A. Gomez Eguiluz, J.R. Martinez-de Dios, and A. Ollero. 2020. “Asynchronous Event-Based Clustering and Tracking for Intrusion Monitoring in UAS.” _2020 IEEE International Conference on Robotics and Automation (ICRA)_, May. IEEE. <http://dx.doi.org/10.1109/ICRA40945.2020.9197341>.
+<a id="org7f61405"></a>Messikommer, Nico, Daniel Gehrig, Antonio Loquercio, and Davide Scaramuzza. n.d. “Event-Based Asynchronous Sparse Convolutional Networks.” <https://youtu.be/LauQ6LWTkxM?t=4>.
