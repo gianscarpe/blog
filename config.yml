@@ -1,5 +1,5 @@
 baseURL: 'https://blog.scarpellini.dev'
-title: My blog
+title: Vision ideas
 paginate: 5
 theme: hugo-PaperMod
 
@@ -30,7 +30,7 @@ menu:
   
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: My blog
+  title: Vision ideas
   description: test
   author: Gianluca Scarpellini
 
@@ -44,7 +44,7 @@ params:
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: My blog
+    title: Vision ideas
     # imageUrl: '<img location>'
     # imageTitle: my image
     buttons:
@@ -52,12 +52,10 @@ params:
         url: posts
       - name: Tags
         url: tags
-      - name: Research
-        url: research
 
   homeInfoParams:
-        Title: Hi there wave
-        Content: Can be Info, links, about...
+        Title: This is my blog!
+        Content: I'm only a Ph.D. student in Computer Vision. Maybe one day I'll change the world; in the meantime, I try to convince people to work on what matter.
             
   socialIcons:
     - name: github
