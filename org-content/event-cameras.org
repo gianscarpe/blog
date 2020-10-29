@@ -22,6 +22,10 @@ ready for industrial applications. Pic [..] is an (abused) example of how fast
 the community has grown during the past decade. Today, artificial agent perform
 better than human on huge set of classes.
 
+#+attr_html: :width 200 :float right :title This is me saying \"hello\"
+#+ATTR_ORG: :width 100
+[[file:images/me.png]]
+
 Is it all? Has computer vision reached complete maturity? I believe it's not.
 
 Standard cameras suffer of major intrinsics issues which can hardly be solved -
