@@ -4,7 +4,8 @@
 #+HUGO_SECTION: posts
 #+hugo_auto_set_lastmod: t
 * Event-cameras                                                
-** TODO A gentle introduction to event cameras                :introduction:event_cameras:
+** DONE A gentle introduction to event cameras  :introduction:event_cameras:
+CLOSED: [2020-10-29 Thu 09:34]
 :PROPERTIES:
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :noauthor true :nocomment true :nodate true :nopaging true :noread true
 :EXPORT_HUGO_WEIGHT: auto
@@ -13,18 +14,18 @@
 *** Introduction
 Can computer see like we humans do? Computer vision is a joint branch of machine
 learning, statistics, and computer science. It's main goal is providing
-artificial agents (e.g., robots, autonomous cars, drones, surveilling systems,
-... ) the ability to *see* and *understand* the environment. Deep learning and
-machine learning are contributing enormeously to computer vision. Open-source
+artificial agents (e.g., robots, autonomous cars, drones, surveilling systems)
+the ability to *see* and *understand* the environment. Deep learning and machine
+learning are contributing enormeously to computer vision. Open-source
 implementations of the recent literature (e.g., torchvision, tensorflow,
 recently opencv) demonstrate that deep learning applications are mature and
-ready for industrial applications. Pic [..] is an (abused) example of how fast
+ready for industrial applications. The Pic below is an (abused) example of how fast
 the community has grown during the past decade. Today, artificial agent perform
 better than human on huge set of classes.
 
-#+attr_html: :width 200 :float right :title This is me saying \"hello\"
-#+ATTR_ORG: :width 100
-[[file:images/me.png]]
+#+attr_html: :class center :float right :title Old joke (not true anymore)
+#+ATTR_ORG: :width 10
+[[file:images/old_joke.png]]
 
 Is it all? Has computer vision reached complete maturity? I believe it's not.
 
@@ -40,10 +41,10 @@ inspiration for engineering. Could we rethink computer vision, taking source
 from Nature?g *Event-cameras* (cameras based on *events*) could be the
 answer. In the following paragraphs, I try to convince the reader of the
 potentials of event-based vision applications. This article is structure as
-follows. I present [[/introduction#event-cameras][event-cameras]], their principle of operations, and their
-motivation. Next, I show some [[/introduction#solutions][solutions]] to solve the main challenges of
-event-based vision. And finally, I summarize our [[/introduction#conclusion][conclusions]] and propose our
-main idea: everyone can contribute.
+follows. I present event-cameras, their principle of operations, and their
+motivation. Next, I show some solutions to solve the main challenges of
+event-based vision. And finally, I conclude with a what I believe its the key:
+everyone can contribute.
 
 *** Event-cameras
 Traditional cameras collect light and, at fixed frame-rate, output a single
@@ -61,6 +62,10 @@ especially in automotive applications. For example, the sun in front of the
 driver is a problematic issue for a standard camera. Moreover, if the incoming
 light is too much, as in the after-mentioned example, the pixels saturate and
 the resulting image is *burned*.
+
+#+attr_html: :class center :float right :title This is me saying \"hello\"
+#+ATTR_ORG: :width 100
+[[file:images/me.png]]
 
 The amateur photographer is aware of these issues and can use these
 characteristics to create more artistic photo. On the other hand, computer
@@ -93,6 +98,11 @@ monitored space as well, because no subjects' details (e.g., face, eyes, and so
 on) are captured. Major competitors [fn:: Samsung
 [[https://www.samsung.com/au/smart-home/smartthings-vision-u999/]]] are exploring
 low-cost event-based applications for intrusion detection.
+
+#+attr_html: :class center :float right :title How does it work?
+#+ATTR_ORG: :width 10
+[[file:images/sphere_comparison.png]]
+
 
 Where do the disadvantages lay?
 
@@ -135,7 +145,7 @@ reconstruction quality using *simulated data* for training.
 
 We can group events together and use events as standard frames. Events frames
 can be stacked in tensors and used as input for synchronous deep learning models
-(e.g., CNN, ANN, ...). Currently, representing events as frames is the most
+(e.g., CNN, ANN). Currently, representing events as frames is the most
 common technique to exploit event-cameras. This approach increases, however,
 bandwidth and redundancy, and its benefits are limited compared to standard
 cameras. Asynchronous machine learning models---e.g., Spiking Neural
@@ -182,13 +192,9 @@ OpenEV, would certaintly increase the interest of industries and practitionares,
 especially if big players were backing the project (we'll see, Samsung and Sony
 have already shown their interest). If I made you more curious, kudos to me! I
 refer you to cite:Gallego_2020 ---a fantastic and exhaustive overview of
-event-cameras from the *dragons* of the field.
+event-cameras from some the *dragons* of the field.
 
-** TODO Event-based monocular Human Pose Estimation: what I learned and the work ahead 
-:PROPERTIES:
-:EXPORT_FILE_NAME: event_based_monocular_human_pose_estiamtion
-:EXPORT_HUGO_SECTION: posts
-:END:
+
 * COMMENT Notes
    - WHO: Open post about event-cameras to attract researchers and computer
      vision practitioners 
@@ -197,6 +203,7 @@ event-cameras from the *dragons* of the field.
    - *Central idea*: present event-cameras and send a message to the computer
      vision community; join us, and help us build the next opencv for
      event-cameras
+** TODO Event-based monocular Human Pose Estimation: what I learned and the work ahead 
 *** TODO
    - [ ] Figures
 

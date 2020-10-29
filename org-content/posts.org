@@ -1,0 +1,12 @@
+#+STARTUP: indent
+#+AUTHOR: Gianluca Scarpellini
+#+HUGO_BASE_DIR: ../
+#+HUGO_SECTION: posts
+#+hugo_auto_set_lastmod: t
+* Meme                                                
+** TODO Selfish Memes
+:PROPERTIES:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :noauthor true :nocomment true :nodate true :nopaging true :noread true
+:EXPORT_HUGO_WEIGHT: auto
+:EXPORT_FILE_NAME: dawkins_meme
+:END:

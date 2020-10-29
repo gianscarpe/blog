@@ -1,9 +1,10 @@
 +++
 title = "A gentle introduction to event cameras"
 author = ["Gianluca Scarpellini"]
-lastmod = 2020-10-14T07:47:37+02:00
+date = 2020-10-29T09:34:00+01:00
+lastmod = 2020-10-29T10:07:10+01:00
 tags = ["introduction", "event-cameras"]
-draft = true
+draft = false
 weight = 2001
 noauthor = true
 nocomment = true
@@ -16,16 +17,16 @@ noread = true
 
 Can computer see like we humans do? Computer vision is a joint branch of machine
 learning, statistics, and computer science. It's main goal is providing
-artificial agents (e.g., robots, autonomous cars, drones, surveilling systems,
-... ) the ability to **see** and **understand** the environment. Deep learning and
-machine learning are contributing enormeously to computer vision. Open-source
+artificial agents (e.g., robots, autonomous cars, drones, surveilling systems)
+the ability to **see** and **understand** the environment. Deep learning and machine
+learning are contributing enormeously to computer vision. Open-source
 implementations of the recent literature (e.g., torchvision, tensorflow,
 recently opencv) demonstrate that deep learning applications are mature and
-ready for industrial applications. Pic [..] is an (abused) example of how fast
+ready for industrial applications. The Pic below is an (abused) example of how fast
 the community has grown during the past decade. Today, artificial agent perform
 better than human on huge set of classes.
 
-{{< figure src="/ox-hugo/me.png#center" class="center" title="This is me saying \"hello\"" >}}
+{{< figure src="/ox-hugo/old_joke.png" title="Old joke (not true anymore)" class="center" >}}
 
 Is it all? Has computer vision reached complete maturity? I believe it's not.
 
@@ -41,10 +42,10 @@ inspiration for engineering. Could we rethink computer vision, taking source
 from Nature?g **Event-cameras** (cameras based on **events**) could be the
 answer. In the following paragraphs, I try to convince the reader of the
 potentials of event-based vision applications. This article is structure as
-follows. I present [event-cameras](/introduction#event-cameras), their principle of operations, and their
-motivation. Next, I show some [solutions](/introduction#solutions) to solve the main challenges of
-event-based vision. And finally, I summarize our [conclusions](/introduction#conclusion) and propose our
-main idea: everyone can contribute.
+follows. I present event-cameras, their principle of operations, and their
+motivation. Next, I show some solutions to solve the main challenges of
+event-based vision. And finally, I conclude with a what I believe its the key:
+everyone can contribute.
 
 
 #### Event-cameras {#event-cameras}
@@ -64,6 +65,8 @@ especially in automotive applications. For example, the sun in front of the
 driver is a problematic issue for a standard camera. Moreover, if the incoming
 light is too much, as in the after-mentioned example, the pixels saturate and
 the resulting image is **burned**.
+
+{{< figure src="/ox-hugo/me.png" title="This is me saying \"hello\"" class="center" >}}
 
 The amateur photographer is aware of these issues and can use these
 characteristics to create more artistic photo. On the other hand, computer
@@ -95,6 +98,8 @@ detection, and fast movement tracking. Events data preserve privacy of the
 monitored space as well, because no subjects' details (e.g., face, eyes, and so
 on) are captured. Major competitors&nbsp;[^fn:1] are exploring
 low-cost event-based applications for intrusion detection.
+
+{{< figure src="/ox-hugo/sphere_comparison.png" title="How does it work?" class="center" >}}
 
 Where do the disadvantages lay?
 
@@ -128,22 +133,22 @@ vision; we need standardize, easy-to-use simulators. They must be **open-source*
 as everyone could contribute.
 
 Scaramuzza and his team developed an open-source simulator
-([Rebecq, Gehrig, and Scaramuzza 2018](#orgc20b4ae)). This could be exploit to generate huge amount of
+([Rebecq, Gehrig, and Scaramuzza 2018](#org18229e9)). This could be exploit to generate huge amount of
 publicly available dataset, both with complete simulation or by converting
 standard computer vision dataset to events data. They made their point in an
 elegant way: they engineered an approach for **reconstructing** gray-scale images
-from events ([Rebecq et al. 2020](#org83d6281)). Their reconstruction is
+from events ([Rebecq et al. 2020](#orgad3e8b6)). Their reconstruction is
 smooth and clear even in impossible conditions---e.g., capturing a bullet moving
 at 1,000 km/h. This should be clear by now: they could only achieve this amazing
 reconstruction quality using **simulated data** for training.
 
 We can group events together and use events as standard frames. Events frames
 can be stacked in tensors and used as input for synchronous deep learning models
-(e.g., CNN, ANN, ...). Currently, representing events as frames is the most
+(e.g., CNN, ANN). Currently, representing events as frames is the most
 common technique to exploit event-cameras. This approach increases, however,
 bandwidth and redundancy, and its benefits are limited compared to standard
 cameras. Asynchronous machine learning models---e.g., Spiking Neural
-Network---and sparse CNN ([Messikommer et al., n.d.](#orge7aaf94)) are fascinating
+Network---and sparse CNN ([Messikommer et al., n.d.](#orge0f3284)) are fascinating
 path of research.
 
 
@@ -188,18 +193,18 @@ collecting data. A well-engineered event-based vision package, lets call it
 OpenEV, would certaintly increase the interest of industries and practitionares,
 especially if big players were backing the project (we'll see, Samsung and Sony
 have already shown their interest). If I made you more curious, kudos to me! I
-refer you to ([Gallego et al. 2020](#org7d2d051)) ---a fantastic and exhaustive overview of
-event-cameras from the **dragons** of the field.
+refer you to ([Gallego et al. 2020](#org0764e08)) ---a fantastic and exhaustive overview of
+event-cameras from some the **dragons** of the field.
 
 
 ## Bibliography {#bibliography}
 
-<a id="org7d2d051"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>.
+<a id="org0764e08"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>.
 
-<a id="orge7aaf94"></a>Messikommer, Nico, Daniel Gehrig, Antonio Loquercio, and Davide Scaramuzza. n.d. “Event-Based Asynchronous Sparse Convolutional Networks.” <https://youtu.be/LauQ6LWTkxM?t=4>.
+<a id="orge0f3284"></a>Messikommer, Nico, Daniel Gehrig, Antonio Loquercio, and Davide Scaramuzza. n.d. “Event-Based Asynchronous Sparse Convolutional Networks.” <https://youtu.be/LauQ6LWTkxM?t=4>.
 
-<a id="orgc20b4ae"></a>Rebecq, Henri, Daniel Gehrig, and Davide Scaramuzza. 2018. “ESIM: An Open Event Camera Simulator.” <https://www.blender.org/>.
+<a id="org18229e9"></a>Rebecq, Henri, Daniel Gehrig, and Davide Scaramuzza. 2018. “ESIM: An Open Event Camera Simulator.” <https://www.blender.org/>.
 
-<a id="org83d6281"></a>Rebecq, Henri, Rene Ranftl, Vladlen Koltun, and Davide Scaramuzza. 2020. “High Speed and High Dynamic Range Video with an Event Camera.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_ nil (nil):1. <https://doi.org/10.1109/tpami.2019.2963386>.
+<a id="orgad3e8b6"></a>Rebecq, Henri, Rene Ranftl, Vladlen Koltun, and Davide Scaramuzza. 2020. “High Speed and High Dynamic Range Video with an Event Camera.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_ nil (nil):1. <https://doi.org/10.1109/tpami.2019.2963386>.
 
 [^fn:1]: Samsung <https://www.samsung.com/au/smart-home/smartthings-vision-u999/>
