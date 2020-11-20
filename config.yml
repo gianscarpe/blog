@@ -36,6 +36,8 @@ params:
   defaultTheme: auto
   disableThemeToggle : false
   disableSpecial1stPost : false
+  cover:
+    image: "https://avatars3.githubusercontent.com/u/38523369?s=400&u=25a5e8616cbe30cfb043ff23d5e9f761b2249b8e&v=4"
 
   homeInfoParams:
         Title: This is my blog!
