@@ -4,7 +4,7 @@
 #+HUGO_SECTION: posts
 #+hugo_auto_set_lastmod: t
 * Event-cameras                                                
-** TODO A gentle introduction to event cameras  :introduction:event_cameras:
+** A gentle introduction to event cameras  :introduction:event_cameras:
 :PROPERTIES:
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :noauthor true :nocomment true :nodate true :nopaging true :noread true
 :EXPORT_HUGO_WEIGHT: auto
@@ -22,8 +22,7 @@ ready for industrial applications (#TODO: add examples). The Figure below is an
 (abused) example of how fast the community has grown during the past
 decade. Today, artificial agent perform better than human on huge set of
 classes.
-
-#+attr_html: :class center :float right :title Old joke (link https://xkcd.com/1425/)
+#+attr_html: :width 100% :class center :float right :title Old joke (link https://xkcd.com/1425/)
 #+ATTR_ORG: :width 10
 [[file:images/old_joke.png]]
 
@@ -55,9 +54,10 @@ becomes *redundant*. Consequently, standard cameras with high frame-rate produce
 occurs---that no algorithm can efficiently process. These limitation leads to
 other common issues in standard computer vision: narrowed dynamic range and
 blooming.
-#+attr_html: :class center :float right :title Dash Cameras vs Event-cameras (provided by Prophesee)
+#+attr_html: :class center :float right :title GoPro vs Prophesee event-camera
 #+ATTR_ORG: :width 100
-[[file:images/gopro.png]]
+[[file:images/gopro.gif]]
+
 
 Each standard image is *digitalized* and stored with a finite range of values
 (e.g., 256 values per channel). If the light varies abruptly in the scene, the
@@ -68,15 +68,14 @@ problematic issue for a standard camera. Moreover, if the incoming light is too
 much, as in the after-mentioned example, the pixels saturate and the resulting
 image is *burned*.
 
-#+attr_html: :class center :float right :title This is me saying \"hello\" at an event-camera
-#+ATTR_ORG: :width 100
-[[file:images/me.png]]
-
 The amateur photographer is aware of these issues and can use these
 characteristics to create more artistic photo. On the other hand, computer
 vision algorithms must be *reliable*, not artistic, and their reliability is
 under attack in dynamic scenarios or when sources of lights are present in the
 scene.
+#+attr_html: :class center :float right :title This is me saying \"hello\" at an event-camera
+#+ATTR_ORG: :width 100
+[[file:images/me.png]]
 
 *Can we rethink computer vision?*
 
@@ -86,9 +85,6 @@ an asynchronous manner. *Each event has 4 values: the position tuple on the
 image plane (x, y), the polarity of the change (positive or negative), and the
 timestamp of the its occurrence*. This paradigm shift leads to some interesting
 advantages.
-#+attr_html: :class center :float right :title This is me saying \"hello\" at an event-camera
-#+ATTR_ORG: :width 100
-[[file:images/events.png]]
 
 First of all, since each pixel work independently, event-cameras are more robust
 against strong light changes. When the pixel of a standard camera receives too
@@ -101,8 +97,11 @@ if each pixel transmit *only* the intensity changes, the bandwidth---the amount
 of transmitted data---stays very low, while the rate---the speed of data
 transmission---grows over 1 million events per second. Consequently, events
 paradigm is for vision what oil is for energy: efficient, rapid, and
-flexible.
-#TODO: add video comparison events/standard cameras
+flexible. In the following Figure from cite:Gallego_2020 you can find an example
+of what I'm saying.
+#+attr_html: :class center :float right :title Events vs frames 
+#+ATTR_ORG: :width 100
+[[file:images/events.png]]
 
 These interesting characteristics made event-cameras the best available solution
 for robotics platform, intrusion detection, and fast movement tracking. Events
@@ -110,10 +109,6 @@ data preserve privacy of the monitored space as well, because no subjects'
 details (e.g., face, eyes, and so on) are captured. Major companies [fn::
 Samsung [[https://www.samsung.com/au/smart-home/smartthings-vision-u999/]]] are
 exploring low-cost event-based applications for intrusion detection.
-
-#+attr_html: :class center :float right :title How does it work?
-#+ATTR_ORG: :width 10
-[[file:images/sphere_comparison.png]]
 
 
 *** Where do the disadvantages lay?
@@ -152,9 +147,13 @@ standard computer vision dataset to events data. They made their point in an
 elegant way: they engineered an approach for *reconstructing* gray-scale images
 from events cite:rebecq20_high_speed_high_dynam_range. Their reconstruction is
 smooth and clear even in impossible conditions---e.g., capturing a bullet moving
-at 1,000 km/h. This should be clear by now: they could only achieve this amazing
-reconstruction quality using *simulated data* for training.
-#TODO: add example
+at 1,000 km/h as in the following Figure. This should be clear by now: they
+could only achieve this amazing reconstruction quality using *simulated data*
+for training.
+#+attr_html: :class center :width 2000px :float right :title Triple-shot dwarf (P10 camera, event-camera, and with a real gun)
+#+ATTR_ORG: :width 200
+[[file:images/dwarf.png]]
+
 
 We can group events together and use events as standard frames. Events frames
 can be stacked in tensors and used as input for synchronous deep learning models
@@ -181,8 +180,7 @@ OpenEV, would certaintly increase the interest of industries and practitionares,
 especially if big players were backing the project (we'll see, Samsung and Sony
 have already shown their interest). If I made you more curious, kudos to me! I
 refer you to cite:Gallego_2020 ---a fantastic and exhaustive overview of
-event-cameras from some the *dragons* of the field.
-
+event-cameras overview---and to [[http://rpg.ifi.uzh.ch/docs/scaramuzza/2019.07.11_Scaramuzza_Event_Cameras_Tutorial.pdf][Davide Scaramuzza's tutorial on event-cameras]].
 
 * COMMENT Notes
    - WHO: Open post about event-cameras to attract researchers and computer
@@ -218,5 +216,5 @@ I'll strongly prefer papers with a released implementation. Only in code
      
 ** TODO Event-based monocular Human Pose Estimation: what I learned and the work ahead 
 *** TODO
-   - [ ] Figures
+   - [X] Figures
 

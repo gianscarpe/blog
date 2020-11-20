@@ -224,7 +224,7 @@
 }
 
 .post-content img {
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 .toc {
@@ -320,7 +320,7 @@
 
 .center{
     display: block;
-    width: 40%;
+    width: 50%;
     margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
                             whatever floats your boat, but keep the
                             horizontal 'auto' for this to work */
