@@ -1,0 +1,22 @@
+baseURL: 'https://blog.scarpellini.dev'
+title: Cactus ideas - Gianluca Scarpellini
+
+paginate: 5
+theme: "cactus"
+
+menu:
+  main:
+    - name: Posts
+      url: /posts/
+      weight: 1
+    - name: GitHub
+      url: 'https://github.com/gianscarpe'
+    - name: Resume
+      url: 'https://raw.githubusercontent.com/gianscarpe/resume/master/Gianluca_Scarpellini_CV.pdf'
+    - name: Goodreads
+      url: 'https://www.goodreads.com/user/show/123225277-gianscarpe'
+
+params:
+  title: Cactus ideas - Gianluca Scarpellini
+  author: Gianluca Scarpellini
+
