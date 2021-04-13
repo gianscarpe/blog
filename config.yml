@@ -11,6 +11,8 @@ menu:
       weight: 1
     - name: GitHub
       url: 'https://github.com/gianscarpe'
+    - name: Publications
+      url: 'https://blog.scarpellini.dev/tags/publications/'
     - name: Resume
       url: 'https://raw.githubusercontent.com/gianscarpe/resume/master/Gianluca_Scarpellini_CV.pdf'
     - name: Goodreads

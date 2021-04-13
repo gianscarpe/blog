@@ -2,7 +2,7 @@
 title = "Monocular HPE"
 author = ["Gianluca Scarpellini"]
 lastmod = 2021-11-20T15:00:05+01:00
-tags = ["introduction", "event-cameras"]
+tags = ["publications", "event-cameras"]
 draft = false
 weight = 2001
 noauthor = true
