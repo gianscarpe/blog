@@ -36,20 +36,11 @@ from the RGB Human3.6m dataset. Experiments demonstrate that our method
 achieves state-of-the-art accuracy, narrowing the performance gap between
 standard RGB and event-based vision.
 [Code](https://github.com/gianscarpe/event-based-monocular-hpe)
-#### Method
-
-#### Results
-{{< figure src="/ox-hugo/event-based-hpe/figures/results.png" title="Visual results" class="center" width="100%" >}}
+[webpage](https://iit-pavis.github.io/lifting_events_to_3d_hpe/)
 
 #### BibTex Citation
 ```
  @inproceedings{gscarpellini2021,
 }
 ```
-
-#### References
-<a id="1">[1]</a> Falcon, WA and .al (2019). PyTorch Lightning GitHub. Note:
-https://github.com/PyTorchLightning/pytorch-lightning
-
-<a id="2">[2]</a> Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>
 
