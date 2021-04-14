@@ -1,5 +1,5 @@
 +++
-title = "Monocular HPE"
+title = "Lifting Monocular Events to 3D Human Poses"
 author = ["Gianluca Scarpellini"]
 lastmod = 2021-04-13T15:00:05+01:00
 tags = ["publications", "event-cameras"]
@@ -12,7 +12,7 @@ nopaging = true
 noread = true
 +++
 
-[Gianluca Scarpellini](https://scarpellini.dev/) [Pietro Morerio](https://scholar.google.com/citations?user=lPV9rbkAAAAJ&hl=it&oi=ao) [Alessio Del Bue](https://scholar.google.com/citations?user=LUzvbGIAAAAJ&hl=it&oi=ao)
+##### Authors: [Gianluca Scarpellini](https://scarpellini.dev/) [Pietro Morerio](https://scholar.google.com/citations?user=lPV9rbkAAAAJ&hl=it&oi=ao) [Alessio Del Bue](https://scholar.google.com/citations?user=LUzvbGIAAAAJ&hl=it&oi=ao)
 
 {{< figure src="/ox-hugo/event-based-hpe/figures/abstr_mono.png" title="Our method" class="center" width="100%" >}}
 
@@ -35,7 +35,7 @@ challenging dataset for event-based human pose estimation by simulating events
 from the RGB Human3.6m dataset. Experiments demonstrate that our method
 achieves state-of-the-art accuracy, narrowing the performance gap between
 standard RGB and event-based vision.
-
+[Code](https://github.com/gianscarpe/event-based-monocular-hpe)
 #### Method
 
 #### Results
@@ -51,5 +51,5 @@ standard RGB and event-based vision.
 <a id="1">[1]</a> Falcon, WA and .al (2019). PyTorch Lightning GitHub. Note:
 https://github.com/PyTorchLightning/pytorch-lightning
 
-<a id="2">[2]</a>Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>
+<a id="2">[2]</a> Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>
 
