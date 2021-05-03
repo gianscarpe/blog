@@ -3,14 +3,14 @@
 #+HUGO_BASE_DIR: ../
 #+HUGO_SECTION: posts
 #+hugo_auto_set_lastmod: t
-* Event-cameras                                                
-** A gentle introduction to event cameras  :introduction:event_cameras:
+
+* A gentle introduction to event cameras         :introduction:event_cameras:
 :PROPERTIES:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :noauthor true :nocomment true :nodate true :nopaging true :noread true
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :noauthor true :nocomment true :nodate true
 :EXPORT_HUGO_WEIGHT: auto
 :EXPORT_FILE_NAME: introduction
 :END:
-*** Introduction
+** Introduction
 Can computer see like we humans do? Computer vision is a joint branch of machine
 learning, statistics, and computer science. It's main goal is providing
 artificial agents (e.g., robots, autonomous cars, drones, surveilling systems)
@@ -45,7 +45,7 @@ motivation. Next, I show some solutions to solve the *main challenges of
 event-based vision*. And finally, I conclude with a what I believe its the key:
 everyone can contribute.
 
-*** Event-cameras
+** Event-cameras
 Traditional cameras collect light and, at fixed frame-rate, output a single
 frame. This approach suffers, however, of severe limitations. If part of the
 scene is static, each frame contains the *same* pixel information, and the data
@@ -110,8 +110,7 @@ details (e.g., face, eyes, and so on) are captured. Major companies [fn::
 Samsung [[https://www.samsung.com/au/smart-home/smartthings-vision-u999/]]] are
 exploring low-cost event-based applications for intrusion detection.
 
-
-*** Where do the disadvantages lay?
+** Where do the disadvantages lay?
 
 Event-cameras detect only the movements and transmit asynchronous data. If the
 scene is static, like in a beautiful mountain panorama, the only events are
@@ -120,7 +119,7 @@ computer vision applications. Moreover, deep learning models rely on
 *synchronous* tensor representation, therefore even the *deep learning
 revolution* is not directly available for event cameras.
 
-*** Solutions
+** Solutions
 If you were looking for the Saint Grail of computer vision, look somewhere
 else. They are not. Event-cameras are novel, expensive sensors---especially if
 you are a first-time practitionares in computer vision. A huge effort is still
@@ -145,11 +144,10 @@ cite:Rebecq2018ESIM:Simulator. This could be exploit to generate huge amount of
 publicly available dataset, both with complete simulation or by converting
 standard computer vision dataset to events data. They made their point in an
 elegant way: they engineered an approach for *reconstructing* gray-scale images
-from events cite:rebecq20_high_speed_high_dynam_range. Their reconstruction is
-smooth and clear even in impossible conditions---e.g., capturing a bullet moving
-at 1,000 km/h as in the following Figure. This should be clear by now: they
-could only achieve this amazing reconstruction quality using *simulated data*
-for training.
+from events cite:Rebecq19pami. Their reconstruction is smooth and clear even in
+impossible conditions---e.g., capturing a bullet moving at 1,000 km/h as in the
+following Figure. This should be clear by now: they could only achieve this
+amazing reconstruction quality using *simulated data* for training.
 #+attr_html: :class center :width 2000px :float right :title Triple-shot dwarf (P10 camera, event-camera, and with a real gun)
 #+ATTR_ORG: :width 200
 [[file:images/dwarf.png]]
@@ -164,8 +162,7 @@ cameras. Asynchronous machine learning models---e.g., Spiking Neural
 Network---and sparse CNN cite:MessikommerEvent-basedNetworks are fascinating
 path of research.
 
-
-*** Conclusion
+** Conclusion
 I presented event-cameras and showed their advantages and their limits. I
 discuss how and in what measures event-cameras could change computer vision
 applications. In particular, I focused on application that necessitates low
@@ -182,6 +179,120 @@ have already shown their interest). If I made you more curious, kudos to me! I
 refer you to cite:Gallego_2020 ---a fantastic and exhaustive overview of
 event-cameras overview---and to [[http://rpg.ifi.uzh.ch/docs/scaramuzza/2019.07.11_Scaramuzza_Event_Cameras_Tutorial.pdf][Davide Scaramuzza's tutorial on event-cameras]].
 
+* Lifting Monocular Events to 3D Human Poses :event_cameras:publications:CVPRw:
+:PROPERTIES:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :noauthor true :nocomment true :nodate true :nopaging true :noread true
+:EXPORT_HUGO_WEIGHT: auto
+:EXPORT_FILE_NAME: scarpellini2021lifting
+:END:
+** Abstract
+This paper presents a novel 3D human pose estimation approach using a single
+stream of asynchronous events as input. Most of the state-of-the-art approaches
+solve this task with RGB cameras, which suffer when the subjects are moving
+fast. On the other hand, event-based 3D pose estimation benefits from the
+advantages of event-cameras, especially their efficiency and robustness to
+appearance changes. Yet, finding human poses in asynchronous events is in
+general more challenging than standard RGB pose estimation, since little or no
+events are triggered in static scenes. Here we propose the first learning-based
+method for 3D human pose from a single stream of events. Our method consists of
+two steps. First, we process the event-camera stream to predict three orthogonal
+heatmaps per joint; each heatmap is the projection of of the joint onto one
+orthogonal plane. Next, we fuse the sets of heatmaps to estimate 3D localisation
+of the body joints. As a further contribution, we make available a new,
+challenging dataset for event-based human pose estimation by simulating events
+from the RGB Human3.6m dataset. Experiments demonstrate that our method achieves
+state-of-the-art accuracy, narrowing the performance gap between standard RGB
+and event-based vision.
+- [[https://github.com/gianscarpe/event-based-monocular-hpe][Code]]
+- [[https://iit-pavis.github.io/lifting_events_to_3d_hpe/][Webpage]]
+- [[https://arxiv.org/abs/2104.10609][Arxiv]]
+
+** BibTex citation
+#+begin_example
+@article{scarpellini2021lifting,
+  title={Lifting Monocular Events to 3D Human Poses},
+  author={Scarpellini, Gianluca and Morerio, Pietro and Del Bue, Alessio},
+  journal={arXiv preprint arXiv:2104.10609},
+  year={2021}
+}
+#+end_example
+* Event-cameras, Human Pose Estimation, and what to take home :event_cameras:
+:PROPERTIES:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :noauthor true :nocomment true :nodate true :nopaging true :noread true
+:EXPORT_HUGO_WEIGHT: auto
+:EXPORT_FILE_NAME: insights_event_hpe_research
+:END:
+As I write, [[https://iit-pavis.github.io/lifting_events_to_3d_hpe/][my paper about event-cameras and human-pose estimation]] has been
+accepted at the Computer Vision and Pattern Recognition workshop on
+event-cameras[fn::Link at https://tub-rip.github.io/eventvision2021/]. If you do
+not know what an event-camera is, I wrote about them [[file:event-cameras.org::*A gentle introduction to event cameras][a brief introduction].
+Instead, in this post I just want to share some advice I found useful during my
+research, hopefully to inspire curiosity in other researchers, practitioners,
+and entrepreneurs.
+
+#+attr_html: :width 100% :class center :float right :title The problem: from a moving subject  to skeleton estimation
+#+ATTR_ORG: :width 10
+[[file:images/litftingscarpellini_abstr.png]]
+
+
+** Open-source research
+I'm convinced that Computer vision researchers and practitionares should direct
+each other to increase the state-of-the-art in meaningful ways. To reach such a
+goal, researchers should take a step down the ivy-tower. How? I believe the
+first steps are *writing good-quality code* and *summarizing paper for the general
+public*.
+
+Open-source doesn't mean *low-quality*. Event-based vision is novel, very novel;
+*the opencv for event-cameras* doesn't exist yet, although some are working onto
+it. The Robotics and Perception Group (the university of Zurich and ETH Zurich)
+is collecting papers implementation on their [[https://github.com/uzh-rpg/event-based_vision_resources][github page]]. [[https://www.prophesee.ai/][Prophesee]]---a really
+cool private company---already has a SDK for their event-cameras, but the
+software is limited to its products.
+
+As an attempt, I developed my own tiny library with some tools for
+event-cameras. You can find it at https://github.com/IIT-PAVIS/event_library.
+
+** Event-synthesis
+*Data* are the fuel of novel Deep Learning models. Continuing with the analogy to
+oil, data are also extremely expensive to extract and elaborate. In particular,
+datasets recorded with event-cameras are not comparable in size and variance to
+the large RGB datasets. For these reasons, *event synthesis* is amazing. Recent
+literature provides interesting results about generate synthetic events from RGB
+images or videos cite:Rebecq19pami.
+
+I used my /event-library/ to generate synthetic events from a millions of RGB
+frames of the standard Human3.6m dataset cite:ionescu14_human.
+
+#+attr_html: :width 100% :class center :float right :title Syntehtic events allow to recycle standard RGB datasets and test algorithms without using an event-camera
+#+ATTR_ORG: :width 10
+[[file:images/h3m.png]]
+
+I find this especially intriguing for entrepreneurs and engineers in automotive
+and time-critical applications. Companies can convert their own data to
+synthetic events in order to evaluate event-based algorithms before event
+acquiring event-cameras (which are still expensive, although major companies
+entering the field will lower costs).
+
+** My research -- what about Human Pose Estimation?
+#+begin_quote
+/Only in code veritas./
+#+end_quote
+You have certainly appreciated the results of "Human Pose Estimation" (also
+called "Motion Capture") techniques. They are exploited in /Star Wars/, /Avatar/,
+and major video-games to produce amazing special effect (some examples
+https://www.youtube.com/watch?v=bkvW9hsypHw).
+
+Motion Capture systems are based on specialize hardware and a large number of
+synchronized cameras. In this conditions, motions at high speed are hard to
+capture. My research looks for an answer to a common problem in this
+applications: *elaborating data at high speed*. Event-cameras record movements at
+high speed efficiently.
+
+
+#+attr_html: :width 100% :class center :float right :title Motion Capture with an event-camera
+#+ATTR_ORG: :width 10
+[[file:images/liftingscarpellini_results.png]]
+
 * COMMENT Notes
    - WHO: Open post about event-cameras to attract researchers and computer
      vision practitioners 
@@ -190,31 +301,3 @@ event-cameras overview---and to [[http://rpg.ifi.uzh.ch/docs/scaramuzza/2019.07.
    - *Central idea*: present event-cameras and send a message to the computer
      vision community; join us, and help us build the next opencv for
      event-cameras
-** TODO WOW papers
-I have a dream. I hope that, one day, computer vision researchers and
-practitionares will direct each other to increase the state-of-the-art in
-meaningful ways. To reach such a goal, researchers should take a step down the
-ivy-tower and toward self-made students and college professors. How? I believe
-the first steps are *writing good-quality code* and *summarizing paper for the
-general public*.
-
-Open-source doesn't mean *low-quality*. Event-based vision is novel, very novel;
-*the opencv for event-cameras* doesn't exist yet. The Robotics and Perception
-Group (the university of Zurich and ETH Zurich) is collecting papers
-implementation on their [[https://github.com/uzh-rpg/event-based_vision_resources][github page]]. [[https://www.prophesee.ai/][Prophesee]]---a really cool private
-company---already has a SDK for their event-cameras, but the software is limited
-to its products. Hopefully, we'll have a well-engineered open-source library to
-work with event-cameras.
-
-*WOW papers*---papers worth sharing and knowing---should come *keys on
-hand*. This is mostly not the case. I want to change this path, and I'm not
-alone. I'll summarize the most interesting---and occasional, the most badly
-written---works in dedicated post, to show their strong and their weakness.
-
-I'll strongly prefer papers with a released implementation. Only in code
-*veritas*.
-     
-** TODO Event-based monocular Human Pose Estimation: what I learned and the work ahead 
-*** TODO
-   - [X] Figures
-

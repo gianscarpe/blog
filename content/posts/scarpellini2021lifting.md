@@ -1,10 +1,10 @@
 +++
 title = "Lifting Monocular Events to 3D Human Poses"
 author = ["Gianluca Scarpellini"]
-lastmod = 2021-04-13T15:00:05+01:00
-tags = ["publications", "event-cameras"]
+lastmod = 2021-05-03T10:16:39+02:00
+tags = ["event-cameras", "publications", "CVPRw"]
 draft = false
-weight = 2001
+weight = 1002
 noauthor = true
 nocomment = true
 nodate = true
@@ -12,12 +12,8 @@ nopaging = true
 noread = true
 +++
 
-##### Authors: [Gianluca Scarpellini](https://scarpellini.dev/) [Pietro Morerio](https://scholar.google.com/citations?user=lPV9rbkAAAAJ&hl=it&oi=ao) [Alessio Del Bue](https://scholar.google.com/citations?user=LUzvbGIAAAAJ&hl=it&oi=ao)
+## Abstract {#abstract}
 
-{{< figure src="/ox-hugo/event-based-hpe/figures/abstr_mono.png" title="Our method" class="center" width="100%" >}}
-
-
-#### Abstract
 This paper presents a novel 3D human pose estimation approach using a single
 stream of asynchronous events as input. Most of the state-of-the-art approaches
 solve this task with RGB cameras, which suffer when the subjects are moving
@@ -32,15 +28,22 @@ heatmaps per joint; each heatmap is the projection of of the joint onto one
 orthogonal plane. Next, we fuse the sets of heatmaps to estimate 3D localisation
 of the body joints. As a further contribution, we make available a new,
 challenging dataset for event-based human pose estimation by simulating events
-from the RGB Human3.6m dataset. Experiments demonstrate that our method
-achieves state-of-the-art accuracy, narrowing the performance gap between
-standard RGB and event-based vision.
-[Code](https://github.com/gianscarpe/event-based-monocular-hpe)
-[webpage](https://iit-pavis.github.io/lifting_events_to_3d_hpe/)
+from the RGB Human3.6m dataset. Experiments demonstrate that our method achieves
+state-of-the-art accuracy, narrowing the performance gap between standard RGB
+and event-based vision.
 
-#### BibTex Citation
-```
- @inproceedings{gscarpellini2021,
+-   [Code](https://github.com/gianscarpe/event-based-monocular-hpe)
+-   [Webpage](https://iit-pavis.github.io/lifting%5Fevents%5Fto%5F3d%5Fhpe/)
+-   [Arxiv](https://arxiv.org/abs/2104.10609)
+
+
+## BibTex citation {#bibtex-citation}
+
+```text
+@article{scarpellini2021lifting,
+  title={Lifting Monocular Events to 3D Human Poses},
+  author={Scarpellini, Gianluca and Morerio, Pietro and Del Bue, Alessio},
+  journal={arXiv preprint arXiv:2104.10609},
+  year={2021}
 }
 ```
-

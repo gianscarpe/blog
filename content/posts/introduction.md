@@ -1,18 +1,16 @@
 +++
 title = "A gentle introduction to event cameras"
 author = ["Gianluca Scarpellini"]
-lastmod = 2020-11-20T15:00:05+01:00
+lastmod = 2020-11-30T10:16:39+02:00
 tags = ["introduction", "event-cameras"]
 draft = false
-weight = 2001
+weight = 1001
 noauthor = true
 nocomment = true
 nodate = true
-nopaging = true
-noread = true
 +++
 
-#### Introduction {#introduction}
+## Introduction {#introduction}
 
 Can computer see like we humans do? Computer vision is a joint branch of machine
 learning, statistics, and computer science. It's main goal is providing
@@ -48,7 +46,7 @@ event-based vision**. And finally, I conclude with a what I believe its the key:
 everyone can contribute.
 
 
-#### Event-cameras {#event-cameras}
+## Event-cameras {#event-cameras}
 
 Traditional cameras collect light and, at fixed frame-rate, output a single
 frame. This approach suffers, however, of severe limitations. If part of the
@@ -98,7 +96,7 @@ if each pixel transmit **only** the intensity changes, the bandwidth---the amoun
 of transmitted data---stays very low, while the rate---the speed of data
 transmission---grows over 1 million events per second. Consequently, events
 paradigm is for vision what oil is for energy: efficient, rapid, and
-flexible. In the following Figure from ([Gallego et al. 2020](#orge49ee35)) you can find an example
+flexible. In the following Figure from ([Gallego et al. 2020](#org08fdccf)) you can find an example
 of what I'm saying.
 
 {{< figure src="/ox-hugo/events.png" title="Events vs frames" class="center" >}}
@@ -110,7 +108,7 @@ details (e.g., face, eyes, and so on) are captured. Major companies&nbsp;[^fn:1]
 exploring low-cost event-based applications for intrusion detection.
 
 
-#### Where do the disadvantages lay? {#where-do-the-disadvantages-lay}
+## Where do the disadvantages lay? {#where-do-the-disadvantages-lay}
 
 Event-cameras detect only the movements and transmit asynchronous data. If the
 scene is static, like in a beautiful mountain panorama, the only events are
@@ -120,7 +118,7 @@ computer vision applications. Moreover, deep learning models rely on
 revolution** is not directly available for event cameras.
 
 
-#### Solutions {#solutions}
+## Solutions {#solutions}
 
 If you were looking for the Saint Grail of computer vision, look somewhere
 else. They are not. Event-cameras are novel, expensive sensors---especially if
@@ -142,15 +140,14 @@ vision; we need standardize, easy-to-use simulators. They must be **open-source*
 as everyone could contribute.
 
 Scaramuzza and his team developed an open-source simulator
-([Rebecq, Gehrig, and Scaramuzza 2018](#orgb5e3a39)). This could be exploit to generate huge amount of
+([Rebecq, Gehrig, and Scaramuzza 2018](#org21efa46)). This could be exploit to generate huge amount of
 publicly available dataset, both with complete simulation or by converting
 standard computer vision dataset to events data. They made their point in an
 elegant way: they engineered an approach for **reconstructing** gray-scale images
-from events ([Rebecq et al. 2020](#orgfa5e9a7)). Their reconstruction is
-smooth and clear even in impossible conditions---e.g., capturing a bullet moving
-at 1,000 km/h as in the following Figure. This should be clear by now: they
-could only achieve this amazing reconstruction quality using **simulated data**
-for training.
+from events ([Rebecq et al. 2019](#org707c7dd)). Their reconstruction is smooth and clear even in
+impossible conditions---e.g., capturing a bullet moving at 1,000 km/h as in the
+following Figure. This should be clear by now: they could only achieve this
+amazing reconstruction quality using **simulated data** for training.
 
 {{< figure src="/ox-hugo/dwarf.png" title="Triple-shot dwarf (P10 camera, event-camera, and with a real gun)" class="center" width="2000px" >}}
 
@@ -160,11 +157,11 @@ can be stacked in tensors and used as input for synchronous deep learning models
 common technique to exploit event-cameras. This approach increases, however,
 bandwidth and redundancy, and its benefits are limited compared to standard
 cameras. Asynchronous machine learning models---e.g., Spiking Neural
-Network---and sparse CNN ([Messikommer et al., n.d.](#org7e3ef9e)) are fascinating
+Network---and sparse CNN ([Messikommer et al., n.d.](#org7d44535)) are fascinating
 path of research.
 
 
-#### Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 I presented event-cameras and showed their advantages and their limits. I
 discuss how and in what measures event-cameras could change computer vision
@@ -179,18 +176,18 @@ collecting data. A well-engineered event-based vision package, lets call it
 OpenEV, would certaintly increase the interest of industries and practitionares,
 especially if big players were backing the project (we'll see, Samsung and Sony
 have already shown their interest). If I made you more curious, kudos to me! I
-refer you to ([Gallego et al. 2020](#orge49ee35)) ---a fantastic and exhaustive overview of
+refer you to ([Gallego et al. 2020](#org08fdccf)) ---a fantastic and exhaustive overview of
 event-cameras overview---and to [Davide Scaramuzza's tutorial on event-cameras](http://rpg.ifi.uzh.ch/docs/scaramuzza/2019.07.11%5FScaramuzza%5FEvent%5FCameras%5FTutorial.pdf).
 
 
 ## Bibliography {#bibliography}
 
-<a id="orge49ee35"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>.
+<a id="org08fdccf"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>.
 
-<a id="org7e3ef9e"></a>Messikommer, Nico, Daniel Gehrig, Antonio Loquercio, and Davide Scaramuzza. n.d. “Event-Based Asynchronous Sparse Convolutional Networks.” <https://youtu.be/LauQ6LWTkxM?t=4>.
+<a id="org7d44535"></a>Messikommer, Nico, Daniel Gehrig, Antonio Loquercio, and Davide Scaramuzza. n.d. “Event-Based Asynchronous Sparse Convolutional Networks.” <https://youtu.be/LauQ6LWTkxM?t=4>.
 
-<a id="orgb5e3a39"></a>Rebecq, Henri, Daniel Gehrig, and Davide Scaramuzza. 2018. “ESIM: An Open Event Camera Simulator.” <https://www.blender.org/>.
+<a id="org21efa46"></a>Rebecq, Henri, Daniel Gehrig, and Davide Scaramuzza. 2018. “ESIM: An Open Event Camera Simulator.” <https://www.blender.org/>.
 
-<a id="orgfa5e9a7"></a>Rebecq, Henri, Rene Ranftl, Vladlen Koltun, and Davide Scaramuzza. 2020. “High Speed and High Dynamic Range Video with an Event Camera.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_ nil (nil):1. <https://doi.org/10.1109/tpami.2019.2963386>.
+<a id="org707c7dd"></a>Rebecq, Henri, René Ranftl, Vladlen Koltun, and Davide Scaramuzza. 2019. “High Speed and High Dynamic Range Video with an Event Camera.” _IEEE Trans. Pattern Anal. Mach. Intell. (T-PAMI)_. <http://rpg.ifi.uzh.ch/docs/TPAMI19%5FRebecq.pdf>.
 
 [^fn:1]: Samsung <https://www.samsung.com/au/smart-home/smartthings-vision-u999/>
