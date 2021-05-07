@@ -185,6 +185,11 @@ event-cameras overview---and to [[http://rpg.ifi.uzh.ch/docs/scaramuzza/2019.07.
 :EXPORT_HUGO_WEIGHT: auto
 :EXPORT_FILE_NAME: scarpellini2021lifting
 :END:
+#+attr_html: :width 100% :class center :float right :title The problem: from a moving subject  to skeleton estimation
+#+ATTR_ORG: :width 10
+[[file:images/litftingscarpellini_abstr.png]]
+
+
 ** Abstract
 This paper presents a novel 3D human pose estimation approach using a single
 stream of asynchronous events as input. Most of the state-of-the-art approaches
@@ -216,7 +221,7 @@ and event-based vision.
   year={2021}
 }
 #+end_example
-* Event-cameras, Human Pose Estimation, and what to take home :event_cameras:
+* Some insights from working with event-cameras for Human Pose Estimation :event_cameras:
 :PROPERTIES:
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :noauthor true :nocomment true :nodate true :nopaging true :noread true
 :EXPORT_HUGO_WEIGHT: auto
@@ -225,7 +230,7 @@ and event-based vision.
 As I write, [[https://iit-pavis.github.io/lifting_events_to_3d_hpe/][my paper about event-cameras and human-pose estimation]] has been
 accepted at the Computer Vision and Pattern Recognition workshop on
 event-cameras[fn::Link at https://tub-rip.github.io/eventvision2021/]. If you do
-not know what an event-camera is, I wrote about them [[file:event-cameras.org::*A gentle introduction to event cameras][a brief introduction].
+not know what an event-camera is, I wrote about them [[file:event-cameras.org::*A gentle introduction to event cameras][a brief introduction]].
 Instead, in this post I just want to share some advice I found useful during my
 research, hopefully to inspire curiosity in other researchers, practitioners,
 and entrepreneurs.
@@ -233,7 +238,6 @@ and entrepreneurs.
 #+attr_html: :width 100% :class center :float right :title The problem: from a moving subject  to skeleton estimation
 #+ATTR_ORG: :width 10
 [[file:images/litftingscarpellini_abstr.png]]
-
 
 ** Open-source research
 I'm convinced that Computer vision researchers and practitionares should direct
@@ -284,14 +288,24 @@ https://www.youtube.com/watch?v=bkvW9hsypHw).
 
 Motion Capture systems are based on specialize hardware and a large number of
 synchronized cameras. In this conditions, motions at high speed are hard to
-capture. My research looks for an answer to a common problem in this
-applications: *elaborating data at high speed*. Event-cameras record movements at
-high speed efficiently.
-
+capture. My research looks for an answer to a common problem in these
+applications: *elaborating data at high speed*.
 
 #+attr_html: :width 100% :class center :float right :title Motion Capture with an event-camera
 #+ATTR_ORG: :width 10
 [[file:images/liftingscarpellini_results.png]]
+
+Event-cameras record rapid movements efficiently. These devices could be
+disruptive in motion capture industries, *but first there are some major issues
+to tackle*:
+- First, static parts of the body generate no events (as in fig. above). This is
+  a major issue, as no information means lower reconstruction accuracy. In this
+  case, event-cameras needs some backup from standard RGB cameras
+- Second, more /smart/ techniques should be proposed to leverage the uniqueness of
+  events. In my [[file:event-cameras.org::*A gentle introduction to event cameras][previous post about event-cameras]], I explore recent literature
+  related to /event-by-event/ and /group-of-events/ approaches cite:Gallego_2020.
+
+* How to calibrate an event-camera?
 
 * COMMENT Notes
    - WHO: Open post about event-cameras to attract researchers and computer

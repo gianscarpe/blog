@@ -24,22 +24,23 @@ and entrepreneurs.
 
 
 ### Open-source research {#open-source-research}
-
 I'm convinced that Computer vision researchers and practitionares should direct
 each other to increase the state-of-the-art in meaningful ways. To reach such a
 goal, researchers should take a step down the ivy-tower. How? I believe the
 first steps are **writing good-quality code** and **summarizing paper for the general
 public**.
 
-Open-source doesn't mean **low-quality**. Event-based vision is novel, very novel;
-**the opencv for event-cameras** doesn't exist yet, although some are working onto
-it. The Robotics and Perception Group (the university of Zurich and ETH Zurich)
-is collecting papers implementation on their [github page](https://github.com/uzh-rpg/event-based%5Fvision%5Fresources). [Prophesee](https://www.prophesee.ai/)---a really
-cool private company---already has a SDK for their event-cameras, but the
-software is limited to its products.
+Open-source doesn't mean **low-quality**. Event-based vision is novel, very
+novel; **the opencv for event-cameras** doesn't exist yet, although some are
+working onto it. The Robotics and Perception Group (the university of Zurich and
+ETH Zurich) is collecting papers implementation on their [github
+page](https://github.com/uzh-rpg/event-based%5Fvision%5Fresources).
+[Prophesee](https://www.prophesee.ai/) has a SDK for their event-cameras, but
+the software is limited to its products.
 
 As an attempt, I developed my own tiny library with some tools for
-event-cameras. You can find it at <https://github.com/IIT-PAVIS/event%5Flibrary>.
+event-cameras. You can find it at
+<https://github.com/IIT-PAVIS/event%5Flibrary>.
 
 
 ### Event-synthesis {#event-synthesis}
