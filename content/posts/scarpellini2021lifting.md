@@ -1,7 +1,7 @@
 +++
 title = "Lifting Monocular Events to 3D Human Poses"
 author = ["Gianluca Scarpellini"]
-lastmod = 2021-05-03T10:16:39+02:00
+lastmod = 2021-05-07T18:27:17+02:00
 tags = ["event-cameras", "publications", "CVPRw"]
 draft = false
 weight = 1002
@@ -11,6 +11,9 @@ nodate = true
 nopaging = true
 noread = true
 +++
+
+{{< figure src="/ox-hugo/litftingscarpellini_abstr.png" title="The problem: from a moving subject  to skeleton estimation" class="center" width="100%" >}}
+
 
 ## Abstract {#abstract}
 
