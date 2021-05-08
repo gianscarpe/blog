@@ -221,6 +221,7 @@ and event-based vision.
   year={2021}
 }
 #+end_example
+
 * Some insights from working with event-cameras for Human Pose Estimation :event_cameras:
 :PROPERTIES:
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :noauthor true :nocomment true :nodate true :nopaging true :noread true
@@ -301,9 +302,9 @@ to tackle*:
 - First, static parts of the body generate no events (as in fig. above). This is
   a major issue, as no information means lower reconstruction accuracy. In this
   case, event-cameras needs some backup from standard RGB cameras
-- Second, more /smart/ techniques should be proposed to leverage the uniqueness of
-  events. In my [[file:event-cameras.org::*A gentle introduction to event cameras][previous post about event-cameras]], I explore recent literature
-  related to /event-by-event/ and /group-of-events/ approaches cite:Gallego_2020.
+- Second, /smarter/ techniques should be developed to leverage the uniqueness of
+  events. In my [[file:event-cameras.org::*A gentle introduction to event cameras][previous post about event-cameras]], I explore recent
+  /event-by-event/ and /group-of-events/ approaches cite:Gallego_2020.
 
 * How to calibrate an event-camera?
 

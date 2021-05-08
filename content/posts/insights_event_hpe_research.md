@@ -1,7 +1,7 @@
 +++
 title = "Some insights from working with event-cameras for Human Pose Estimation"
 author = ["Gianluca Scarpellini"]
-lastmod = 2021-05-07T18:27:11+02:00
+lastmod = 2021-05-08T08:17:19+02:00
 tags = ["event-cameras"]
 draft = false
 weight = 1003
@@ -23,7 +23,7 @@ and entrepreneurs.
 {{< figure src="/ox-hugo/litftingscarpellini_abstr.png" title="The problem: from a moving subject  to skeleton estimation" class="center" width="100%" >}}
 
 
-### Open-source research {#open-source-research}
+## Open-source research {#open-source-research}
 
 I'm convinced that Computer vision researchers and practitionares should direct
 each other to increase the state-of-the-art in meaningful ways. To reach such a
@@ -42,17 +42,17 @@ As an attempt, I developed my own tiny library with some tools for
 event-cameras. You can find it at <https://github.com/IIT-PAVIS/event%5Flibrary>.
 
 
-### Event-synthesis {#event-synthesis}
+## Event-synthesis {#event-synthesis}
 
 **Data** are the fuel of novel Deep Learning models. Continuing with the analogy to
 oil, data are also extremely expensive to extract and elaborate. In particular,
 datasets recorded with event-cameras are not comparable in size and variance to
 the large RGB datasets. For these reasons, **event synthesis** is amazing. Recent
 literature provides interesting results about generate synthetic events from RGB
-images or videos ([Rebecq et al. 2019](#org8111899)).
+images or videos ([Rebecq et al. 2019](#org2b1bd76)).
 
 I used my _event-library_ to generate synthetic events from a millions of RGB
-frames of the standard Human3.6m dataset ([Ionescu et al. 2014](#orgd15ee43)).
+frames of the standard Human3.6m dataset ([Ionescu et al. 2014](#orgf2c76c3)).
 
 {{< figure src="/ox-hugo/h3m.png" title="Syntehtic events allow to recycle standard RGB datasets and test algorithms without using an event-camera" class="center" width="100%" >}}
 
@@ -63,7 +63,7 @@ acquiring event-cameras (which are still expensive, although major companies
 entering the field will lower costs).
 
 
-### My research -- what about Human Pose Estimation? {#my-research-what-about-human-pose-estimation}
+## My research -- what about Human Pose Estimation? {#my-research-what-about-human-pose-estimation}
 
 > _Only in code veritas._
 
@@ -86,17 +86,17 @@ to tackle**:
 -   First, static parts of the body generate no events (as in fig. above). This is
     a major issue, as no information means lower reconstruction accuracy. In this
     case, event-cameras needs some backup from standard RGB cameras
--   Second, more _smart_ techniques should be proposed to leverage the uniqueness of
-    events. In my [previous post about event-cameras]({{< relref "event-cameras" >}}), I explore recent literature
-    related to _event-by-event_ and _group-of-events_ approaches ([Gallego et al. 2020](#org9ef10b7)).
+-   Second, _smarter_ techniques should be developed to leverage the uniqueness of
+    events. In my [previous post about event-cameras]({{< relref "event-cameras" >}}), I explore recent
+    _event-by-event_ and _group-of-events_ approaches ([Gallego et al. 2020](#org9575f05)).
 
 
 ## Bibliography {#bibliography}
 
-<a id="org9ef10b7"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>.
+<a id="org9575f05"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Michael Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_. Institute of Electrical and Electronics Engineers (IEEE), 1. <http://dx.doi.org/10.1109/TPAMI.2020.3008413>.
 
-<a id="orgd15ee43"></a>Ionescu, Catalin, Dragos Papava, Vlad Olaru, and Cristian Sminchisescu. 2014. “Human3.6m: Large Scale Datasets and Predictive Methods for 3d Human Sensing in Natural Environments.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_ 36 (7):1325–39. <https://doi.org/10.1109/tpami.2013.248>.
+<a id="orgf2c76c3"></a>Ionescu, Catalin, Dragos Papava, Vlad Olaru, and Cristian Sminchisescu. 2014. “Human3.6m: Large Scale Datasets and Predictive Methods for 3d Human Sensing in Natural Environments.” _IEEE Transactions on Pattern Analysis and Machine Intelligence_ 36 (7):1325–39. <https://doi.org/10.1109/tpami.2013.248>.
 
-<a id="org8111899"></a>Rebecq, Henri, René Ranftl, Vladlen Koltun, and Davide Scaramuzza. 2019. “High Speed and High Dynamic Range Video with an Event Camera.” _IEEE Trans. Pattern Anal. Mach. Intell. (T-PAMI)_. <http://rpg.ifi.uzh.ch/docs/TPAMI19%5FRebecq.pdf>.
+<a id="org2b1bd76"></a>Rebecq, Henri, René Ranftl, Vladlen Koltun, and Davide Scaramuzza. 2019. “High Speed and High Dynamic Range Video with an Event Camera.” _IEEE Trans. Pattern Anal. Mach. Intell. (T-PAMI)_. <http://rpg.ifi.uzh.ch/docs/TPAMI19%5FRebecq.pdf>.
 
 [^fn:1]: Link at <https://tub-rip.github.io/eventvision2021/>

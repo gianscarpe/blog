@@ -18,6 +18,9 @@ menu:
     - name: Goodreads
       url: 'https://www.goodreads.com/user/show/123225277-gianscarpe'
 
+    - name: Twitter
+      url: 'https://twitter.com/gianscarpellinihttps'
+
 params:
   title: Cactus ideas - Gianluca Scarpellini
   author: Gianluca Scarpellini
