@@ -2,7 +2,7 @@ baseURL: 'https://blog.scarpellini.dev'
 title: Cactus ideas - Gianluca Scarpellini
 
 paginate: 5
-theme: "cactus"
+theme: "LoveIt"
 
 menu:
   main:
@@ -17,9 +17,8 @@ menu:
       url: 'https://raw.githubusercontent.com/gianscarpe/resume/master/Gianluca_Scarpellini_CV.pdf'
     - name: Goodreads
       url: 'https://www.goodreads.com/user/show/123225277-gianscarpe'
-
     - name: Twitter
-      url: 'https://twitter.com/gianscarpellinihttps'
+      url: 'https://twitter.com/gianscarpellini'
 
 params:
   title: Cactus ideas - Gianluca Scarpellini

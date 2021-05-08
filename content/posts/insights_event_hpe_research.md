@@ -6,8 +6,7 @@ tags = ["event-cameras"]
 draft = false
 weight = 1003
 noauthor = true
-nocomment = true
-nodate = true
+notate = true
 nopaging = true
 noread = true
 +++
