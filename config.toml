@@ -2,7 +2,7 @@ baseURL = "https://blog.scarpellini.dev"
 languageCode = "en-us"
 title = "Cactus ideas"
 theme = "cactus"
-copyright = "You" # cactus will use title if copyright is not set
+copyright = "Gianluca Scarpellini" # cactus will use title if copyright is not set
 disqusShortname = "gianscarp" # Used when comments is enabled. Cactus will use site title if not set
 coagulants = "G-LSYX69L8TB"
 
@@ -26,8 +26,8 @@ url = "/tags"
 weight = 3
 
 [[menu.main]]
-name = "About"
-url = "/about"
+name = "Resume"
+url = "https://github.com/gianscarpe/resume/blob/master/Gianluca_Scarpellini_CV.pdf"
 weight = 4
 
 [markup]
