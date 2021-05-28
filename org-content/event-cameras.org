@@ -250,9 +250,9 @@ public*.
 Open-source doesn't mean *low-quality*. Event-based vision is novel, very novel;
 *the opencv for event-cameras* doesn't exist yet, although some are working onto
 it. The Robotics and Perception Group (the university of Zurich and ETH Zurich)
-is collecting papers implementation on their [[https://github.com/uzh-rpg/event-based_vision_resources][github page]]. [[https://www.prophesee.ai/][Prophesee]]---a really
-cool private company---already has a SDK for their event-cameras, but the
-software is limited to its products.
+is collecting papers implementation on their [[https://tinyurl.com/m338scwf][github page]]. [[https://www.prophesee.ai/][Prophesee]]---a private
+company focused on event-vision---already has a SDK for their event-cameras, but
+the software is limited to its products.
 
 As an attempt, I developed my own tiny library with some tools for
 event-cameras. You can find it at https://github.com/IIT-PAVIS/event_library.
