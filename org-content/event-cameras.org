@@ -209,7 +209,7 @@ from the RGB Human3.6m dataset. Experiments demonstrate that our method achieves
 state-of-the-art accuracy, narrowing the performance gap between standard RGB
 and event-based vision.
 - [[https://github.com/gianscarpe/event-based-monocular-hpe][Code]]
-- [[https://iit-pavis.github.io/lifting_events_to_3d_hpe/][Webpage]]
+- [[https://tinyurl.com/b3kwbrmy][Webpage]]
 - [[https://arxiv.org/abs/2104.10609][Arxiv]]
 
 ** BibTex citation
@@ -228,7 +228,7 @@ and event-based vision.
 :EXPORT_HUGO_WEIGHT: auto
 :EXPORT_FILE_NAME: insights_event_hpe_research
 :END:
-As I write, [[https://iit-pavis.github.io/lifting_events_to_3d_hpe/][my paper about event-cameras and human-pose estimation]] has been
+As I write, [[https://tinyurl.com/b3kwbrmy][my paper about event-cameras and human-pose estimation]] has been
 accepted at the Computer Vision and Pattern Recognition workshop on
 event-cameras[fn::Link at https://tub-rip.github.io/eventvision2021/]. If you do
 not know what an event-camera is, I wrote about them [[file:event-cameras.org::*A gentle introduction to event cameras][a brief introduction]].

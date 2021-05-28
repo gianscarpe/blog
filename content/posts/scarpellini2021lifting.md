@@ -1,7 +1,7 @@
 +++
 title = "Lifting Monocular Events to 3D Human Poses"
 author = ["Gianluca Scarpellini"]
-lastmod = 2021-05-07T18:27:17+02:00
+lastmod = 2021-05-28T14:50:39+02:00
 tags = ["event-cameras", "publications", "CVPRw"]
 draft = false
 weight = 1002
@@ -36,7 +36,7 @@ state-of-the-art accuracy, narrowing the performance gap between standard RGB
 and event-based vision.
 
 -   [Code](https://github.com/gianscarpe/event-based-monocular-hpe)
--   [Webpage](https://iit-pavis.github.io/lifting%5Fevents%5Fto%5F3d%5Fhpe/)
+-   [Webpage](https://tinyurl.com/b3kwbrmy)
 -   [Arxiv](https://arxiv.org/abs/2104.10609)
 
 
