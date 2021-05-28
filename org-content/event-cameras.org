@@ -255,7 +255,7 @@ company focused on event-vision---already has a SDK for their event-cameras, but
 the software is limited to its products.
 
 As an attempt, I developed my own tiny library with some tools for
-event-cameras. You can find it at https://github.com/IIT-PAVIS/event_library.
+event-cameras. You can find it at [[https://tinyurl.com/vy6zjdkz]].
 
 ** Event-synthesis
 *Data* are the fuel of novel Deep Learning models. Continuing with the analogy to
