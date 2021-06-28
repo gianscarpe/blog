@@ -4,7 +4,7 @@ title = "Cactus ideas"
 theme = "cactus"
 copyright = "Gianluca Scarpellini" # cactus will use title if copyright is not set
 disqusShortname = "https://blog.scarpellini.dev" # Used when comments is enabled. Cactus will use site title if not set
-coagulants = "G-LSYX69L8TB"
+googleAnalytics = "G-LSYX69L8TB"
 
 
 # summaryLength = 2
