@@ -26,10 +26,9 @@ url = "/Short stories"
 weight = 5
 
 [[menu.main]]
-name = "Gallery"
-url = "/gallery"
+name = "Donate"
+url = "https://www.paypal.com/donate?business=A4GM8S9EB4ZUN&no_recurring=0&item_name=I%27m+glad+you+decided+to+offer+me+a+beer%21+&currency_code=EUR"
 weight = 6
-
 
 [[menu.main]]
 name = "Tags"
@@ -54,8 +53,7 @@ weight = 4
   googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
 
   # Home page settings
-  description = "Hi there! My name is Gianluca Scarpellini and I'm a PhD student at the Italian Institute of Technolgy. I'm passionate about computer vision, research, and books! <a href='https://www.paypal.com/donate?business=A4GM8S9EB4ZUN&no_recurring=0&item_name=I%27m+glad+you+decided+to+offer+me+a+beer%21+&currency_code=EUR'>Here's if you want to pay me a beer</a>"
-  mainSection = "posts" # your main section
+  description = "Hi there! My name is Gianluca Scarpellini and I'm a PhD student at the Italian Institute of Technolgy. I'm passionate about computer vision, research, and books!"
   showAllPostsOnHomePage = true # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
   tagsOverview = false # show tags overview by default.
