@@ -37,7 +37,7 @@ weight = 3
 
 [[menu.main]]
 name = "Resume"
-url = "https://github.com/gianscarpe/resume/blob/master/Gianluca_Scarpellini_CV.pdf"
+url = "https://raw.githubusercontent.com/gianscarpe/resume/master/Gianluca_Scarpellini_resume.pdf"
 weight = 4
 
 [markup]
