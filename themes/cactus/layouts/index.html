@@ -108,3 +108,14 @@
   </section>
   {{ end }}
 {{ end }}
+
+<section id="recents">
+  <span class="h1">Updates</span>
+  <ul class="updates-list">
+      {{ range .Site.Data.updates.list }}
+      <li class="updates-item">
+        <a href="{{ .url }}">{{ .name }}</a>: {{ .desc | markdownify }}
+      </li>
+      {{ end }}
+  </ul>
+</section>
