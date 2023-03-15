@@ -2,22 +2,22 @@
     "list": [
       {
           "name":"DeepMind internship",
-          "date":"09-2022",
+          "date":"2022-09",
           "desc":"I started an internship @ DeepMind, working on Offline Policy Evaluation and Successor Features"
       },
       {
           "name":"1 Paper accepted @ CVPR2021",
-          "date":"05-2021",
+          "date":"2021-05",
           "desc":"My paper on Monocular Human Pose Estimation with event-cameras was accepted at CVPRw on event-based vision"
        },
       {
           "name":"PhD Student at Italian Institute of Technology",
-          "date":"11-2020",
+          "date":"2020-11",
           "desc":"I started a PhD on RL and computer vision at Italian Institute of Technology"
        },
       {
           "name":"Pytorch Lightning Contributor",
-          "date":"09-2020",
+          "date":"2020-09",
           "desc":"I started contribution to pytorch-lightning ecoysystem"
        }
 
