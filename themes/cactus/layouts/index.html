@@ -87,10 +87,10 @@
 
   <section id="recents">
     <span class="h1">Updates</span>
-    <ul class="project-list">
+    <ul class="post-list">
         {{ range .Site.Data.updates.list }}
-        <li class="project-item">
-          <div class="meta"><time datetime="{{ time .date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time></div> {{ .name }}: {{ .desc | markdownify }}
+        <li class="post-item">
+          <div class="meta"><time datetime="{{ time .date }}" itemprop="datePublished">{{ .date.Format $dataFormat }}</time></div> {{ .name }}: {{ .desc | markdownify }}
         </li>
         {{ end }}
     </ul>
