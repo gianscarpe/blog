@@ -85,6 +85,17 @@
     {{ end }}
   </section>
 
+  <section id="recents">
+    <span class="h1">Updates</span>
+    <ul class="project-list">
+        {{ range .Site.Data.updates.list }}
+        <li class="project-item">
+          <a href="{{ .url }}">{{ .name }}</a>: {{ .desc | markdownify }}
+        </li>
+        {{ end }}
+    </ul>
+  </section>
+
   {{ $showProjectsList := false }}
   {{ if .Site.Data.projects }}
     {{ $showProjectsList = true }}
@@ -109,13 +120,3 @@
   {{ end }}
 {{ end }}
 
-<section id="recents">
-  <span class="h1">Updates</span>
-  <ul class="updates-list">
-      {{ range .Site.Data.updates.list }}
-      <li class="updates-item">
-        <a href="{{ .url }}">{{ .name }}</a>: {{ .desc | markdownify }}
-      </li>
-      {{ end }}
-  </ul>
-</section>
