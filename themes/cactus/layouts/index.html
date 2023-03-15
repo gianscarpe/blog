@@ -90,7 +90,7 @@
     <ul class="project-list">
         {{ range .Site.Data.updates.list }}
         <li class="project-item">
-          {{ .date }} - {{ .name }}: {{ .desc | markdownify }}
+          <div class="meta"><time datetime="{{ time .date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time></div> {{ .name }}: {{ .desc | markdownify }}
         </li>
         {{ end }}
     </ul>
