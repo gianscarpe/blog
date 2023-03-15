@@ -35,10 +35,6 @@ name = "Tags"
 url = "/tags"
 weight = 3
 
-[[menu.main]]
-name = "Resume"
-url = "https://raw.githubusercontent.com/gianscarpe/resume/master/Gianluca_Scarpellini_resume.pdf"
-weight = 4
 
 [markup]
   [markup.tableOfContents]
