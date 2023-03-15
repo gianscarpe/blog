@@ -90,7 +90,7 @@
     <ul class="post-list">
         {{ range .Site.Data.updates.list }}
         <li class="post-item">
-          <div class="meta"><time datetime="{{ time .date }}" itemprop="datePublished">{{ .date.Format $dataFormat }}</time></div> {{ .name }}: {{ .desc | markdownify }}
+          <div class="meta"><time datetime="{{ time .date }}" itemprop="datePublished"></time></div> {{ .name }}: {{ .desc | markdownify }}
         </li>
         {{ end }}
     </ul>
