@@ -90,7 +90,7 @@
     <ul class="project-list">
         {{ range .Site.Data.updates.list }}
         <li class="project-item">
-          <a href="{{ .url }}">{{ .name }}</a>: {{ .desc | markdownify }}
+          {{ .date }} - {{ .name }}: {{ .desc | markdownify }}
         </li>
         {{ end }}
     </ul>
