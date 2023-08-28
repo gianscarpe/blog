@@ -1,6 +1,6 @@
 baseURL = "https://blog.scarpellini.dev"
 languageCode = "en-us"
-title = "Gianluca Scarpellini's corner"
+title = "Gianluca Scarpellini"
 theme = "cactus"
 copyright = "Gianluca Scarpellini" # cactus will use title if copyright is not set
 disqusShortname = "https://blog.scarpellini.dev" # Used when comments is enabled. Cactus will use site title if not set
@@ -27,7 +27,7 @@ weight = 5
 
 [[menu.main]]
 name = "CV"
-url = "https://github.com/gianscarpe/resume/blob/master/Scarpellini_cv.pdf"
+url = "/Scarpellini_cv.pdf"
 weight = 6
 
 [[menu.main]]
