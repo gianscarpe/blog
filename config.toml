@@ -26,8 +26,8 @@ url = "/Short stories"
 weight = 5
 
 [[menu.main]]
-name = "Donate"
-url = "https://www.paypal.com/donate?business=A4GM8S9EB4ZUN&no_recurring=0&item_name=I%27m+glad+you+decided+to+offer+me+a+beer%21+&currency_code=EUR"
+name = "CV"
+url = "https://github.com/gianscarpe/resume/blob/master/Scarpellini_cv.pdf"
 weight = 6
 
 [[menu.main]]
