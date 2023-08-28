@@ -1,6 +1,6 @@
 baseURL = "https://blog.scarpellini.dev"
 languageCode = "en-us"
-title = "Cactus ideas"
+title = "Gianluca Scarpellini's corner"
 theme = "cactus"
 copyright = "Gianluca Scarpellini" # cactus will use title if copyright is not set
 disqusShortname = "https://blog.scarpellini.dev" # Used when comments is enabled. Cactus will use site title if not set
