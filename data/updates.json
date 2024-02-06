@@ -1,10 +1,15 @@
 {
     "list": [
+{
+    "name": "Paper accepted!,
+    "date": "2024-01",
+    "desc": "My paper resulting from my internship at DeepMind `π2vec: Policy Representation With Successor Features` was accepted at ICLR2024!"
+},
       {
-          "name":"DeepMind internship",
-          "date":"2022-09",
-          "desc":"I started an internship @ DeepMind, working on Offline Policy Evaluation and Successor Features"
-      },
+        "name": "DeepMind internship",
+        "date": "2022-09",
+        "desc": "I started an internship @ DeepMind, working on Offline Policy Evaluation and Successor Features"
+    },
       {
           "name":"1 Paper accepted @ CVPR2021",
           "date":"2021-05",
