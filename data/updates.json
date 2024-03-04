@@ -1,0 +1,37 @@
+{
+    "list": [
+
+        {
+        "name": "Paper accepted!",
+        "date": "2024-02",
+        "desc": "My paper DiffAssemble: A Unified Graph-Diffusion Model for 2D and 3D Reassembly was accepted at CVPR2024!"
+    },
+
+{
+    "name": "Paper accepted!",
+    "date": "2024-01",
+    "desc": "My paper resulting from my internship at DeepMind π2vec: Policy Representation With Successor Features was accepted at ICLR2024!"
+    },
+      {
+        "name": "DeepMind internship",
+        "date": "2022-09",
+        "desc": "I started an internship @ DeepMind, working on Offline Policy Evaluation and Successor Features"
+    },
+      {
+          "name":"1 Paper accepted @ CVPR2021",
+          "date":"2021-05",
+          "desc":"My paper on Monocular Human Pose Estimation with event-cameras was accepted at CVPRw on event-based vision"
+       },
+      {
+          "name":"PhD Student at Italian Institute of Technology",
+          "date":"2020-11",
+          "desc":"I started a PhD on RL and computer vision at Italian Institute of Technology"
+       },
+      {
+          "name":"Pytorch Lightning Contributor",
+          "date":"2020-09",
+          "desc":"I started contribution to pytorch-lightning ecoysystem"
+       }
+
+    ]
+ }
