@@ -1,0 +1,52 @@
+baseURL: 'https://blog.scarpellini.dev'
+title: Vision ideas
+paginate: 5
+theme: hugo-PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpored: false
+
+googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+
+menu:
+  main:
+    - name: Tags
+      url: /tags/
+      weight: 10  
+    - name: Posts
+      url: /posts/
+      weight: 1
+  
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Vision ideas
+  description: test
+  author: Gianluca Scarpellini
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  comments: false
+  defaultTheme: auto
+  disableThemeToggle : false
+  disableSpecial1stPost : false
+  cover:
+    image: "https://avatars3.githubusercontent.com/u/38523369?s=400&u=25a5e8616cbe30cfb043ff23d5e9f761b2249b8e&v=4"
+
+  homeInfoParams:
+        Title: This is my blog!
+        Content: I'm only a Ph.D. student in Computer Vision. Maybe one day I'll change the world; in the meantime, I try to convince people to work on what matter.
+            
+  socialIcons:
+    - name: github
+      url: 'https://github.com/gianscarpe'
+    - name: linkedin
+      url: 'https://www.linkedin.com/in/gianlucascarpellini/'
+
+      

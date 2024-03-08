@@ -1,5 +1,12 @@
 {
     "list": [
+
+        {
+        "name": "Paper accepted!",
+        "date": "2024-02",
+        "desc": "My paper DiffAssemble: A Unified Graph-Diffusion Model for 2D and 3D Reassembly was accepted at CVPR2024!"
+    },
+
 {
     "name": "Paper accepted!",
     "date": "2024-01",
