@@ -2,14 +2,29 @@
     "list": [
         {
             "name": "Paper accepted!",
+            "date": "2024-09",
+            "desc": "Re-assembling the past - The RePAIR dataset and benchmark for real world 2D and 3D puzzle solving was accepted at NeurIPS2024!"
+        },
+        {
+            "name": "Paper accepted!",
+            "date": "2024-07",
+            "desc": "My paper Look Around and Learn-Self-Training Object Detection by Exploration was accepted at ECCV2024!"
+        },
+        {
+            "name": "New Job",
+            "date": "2024-06",
+            "desc": "I started as research scientist at Genesis Therapeutics."
+        },
+        {
+            "name": "Paper accepted!",
             "date": "2024-04",
             "desc": "My paper DiffAssemble-A Unified Graph-Diffusion Model for 2D and 3D Reassembly was accepted at CVPR2024!"
         },
-{
-    "name": "Paper accepted!",
-    "date": "2024-01",
-    "desc": "My paper resulting from my internship at DeepMind π2vec: Policy Representation With Successor Features was accepted at ICLR2024!"
-    },
+    {
+        "name": "Paper accepted!",
+        "date": "2024-01",
+        "desc": "My paper resulting from my internship at DeepMind π2vec: Policy Representation With Successor Features was accepted at ICLR2024!"
+        },
       {
         "name": "DeepMind internship",
         "date": "2022-09",
@@ -21,14 +36,14 @@
           "desc":"My paper on Monocular Human Pose Estimation with event-cameras was accepted at CVPRw on event-based vision"
        },
       {
-          "name":"PhD Student at Italian Institute of Technology",
+          "name":"PhD",
           "date":"2020-11",
-          "desc":"I started a PhD on RL and computer vision at Italian Institute of Technology"
+          "desc":"I started a PhD on RL and computer vision at Istituto Italiano di Tecnologia"
        },
       {
           "name":"Pytorch Lightning Contributor",
           "date":"2020-09",
-          "desc":"I started contribution to pytorch-lightning ecoysystem"
+          "desc":"I started contributing to the pytorch-lightning ecoysystem"
        }
 
     ]
