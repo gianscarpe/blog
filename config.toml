@@ -25,10 +25,6 @@ name = "Short stories"
 url = "/Short stories"
 weight = 5
 
-[[menu.main]]
-name = "CV"
-url = "/Scarpellini_cv.pdf"
-weight = 6
 
 [[menu.main]]
 name = "Tags"
@@ -73,15 +69,8 @@ weight = 3
     name = "github"
     link = "https://github.com/gianscarpe"
   [[params.social]]
-    name = "twitter"
-    link = "https://twitter.com/gianscarpellini"
-  [[params.social]]
     name = "linkedin"
     link = "https://www.linkedin.com/in/gianlucascarpellini"
   [[params.social]]
     name = "email"
     link = "gianluca@scarpellini.dev"  # no need for "mailto:" in the head
-
-[[params.social]]
-    name = "goodreads"
-    link = "https://www.goodreads.com/user/show/123225277-gianscarpe"  # no need for "mailto:" in the head
