@@ -1,6 +1,26 @@
 {
     "list": [
         {
+            "name": "Preprint",
+            "date": "2026-06",
+            "desc": "New preprint from Genesis Therapeutics: Few-step Cofolding with All-Atom Flow Maps."
+        },
+        {
+            "name": "Preprint",
+            "date": "2025-09",
+            "desc": "New preprint: Triangle Multiplication Is All You Need For Biomolecular Structure Representations."
+        },
+        {
+            "name": "Preprint",
+            "date": "2025-05",
+            "desc": "New preprint: Pearl - A Foundation Model for Placing Every Atom in the Right Location."
+        },
+        {
+            "name": "Paper published!",
+            "date": "2025-01",
+            "desc": "Condensation of Force Field Parameters from Machine Learning Predicted Distributions was published in the Journal of Chemical Information and Modeling."
+        },
+        {
             "name": "Paper accepted!",
             "date": "2024-09",
             "desc": "Re-assembling the past - The RePAIR dataset and benchmark for real world 2D and 3D puzzle solving was accepted at NeurIPS2024!"
@@ -13,38 +33,47 @@
         {
             "name": "New Job",
             "date": "2024-06",
-            "desc": "I started as research scientist at Genesis Therapeutics."
+            "desc": "I started as research scientist at Genesis Therapeutics, working on generative models for structural biology."
         },
         {
             "name": "Paper accepted!",
             "date": "2024-04",
             "desc": "My paper DiffAssemble-A Unified Graph-Diffusion Model for 2D and 3D Reassembly was accepted at CVPR2024!"
         },
-    {
-        "name": "Paper accepted!",
-        "date": "2024-01",
-        "desc": "My paper resulting from my internship at DeepMind π2vec: Policy Representation With Successor Features was accepted at ICLR2024!"
+        {
+            "name": "Paper accepted!",
+            "date": "2024-01",
+            "desc": "My paper resulting from my internship at DeepMind π2vec: Policy Representation With Successor Features was accepted at ICLR2024!"
         },
-      {
-        "name": "DeepMind internship",
-        "date": "2022-09",
-        "desc": "I started an internship @ DeepMind, working on Offline Policy Evaluation and Successor Features"
-    },
-      {
-          "name":"1 Paper accepted @ CVPR2021",
-          "date":"2021-05",
-          "desc":"My paper on Monocular Human Pose Estimation with event-cameras was accepted at CVPRw on event-based vision"
-       },
-      {
-          "name":"PhD",
-          "date":"2020-11",
-          "desc":"I started a PhD on RL and computer vision at Istituto Italiano di Tecnologia"
-       },
-      {
-          "name":"Pytorch Lightning Contributor",
-          "date":"2020-09",
-          "desc":"I started contributing to the pytorch-lightning ecoysystem"
-       }
-
+        {
+            "name": "Paper published!",
+            "date": "2023-06",
+            "desc": "Positional diffusion: Ordering unordered sets with diffusion probabilistic models was published in Pattern Recognition Letters."
+        },
+        {
+            "name": "DeepMind internship",
+            "date": "2022-09",
+            "desc": "I started an internship @ DeepMind, working on Offline Policy Evaluation and Successor Features"
+        },
+        {
+            "name": "Paper accepted @ WACV2022",
+            "date": "2022-01",
+            "desc": "My paper Event-driven re-id: A new benchmark and method towards privacy-preserving person re-identification was accepted at WACV2022"
+        },
+        {
+            "name": "1 Paper accepted @ CVPR2021",
+            "date": "2021-05",
+            "desc": "My paper on Monocular Human Pose Estimation with event-cameras was accepted at CVPRw on event-based vision"
+        },
+        {
+            "name": "PhD",
+            "date": "2020-11",
+            "desc": "I started a PhD on RL and computer vision at Istituto Italiano di Tecnologia"
+        },
+        {
+            "name": "Pytorch Lightning Contributor",
+            "date": "2020-09",
+            "desc": "I started contributing to the pytorch-lightning ecoysystem"
+        }
     ]
- }
+}

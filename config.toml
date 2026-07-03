@@ -31,12 +31,24 @@ name = "Tags"
 url = "/tags"
 weight = 3
 
+[[menu.main]]
+name = "Publications"
+url = "/publications"
+weight = 4
+
+[[menu.main]]
+name = "Career"
+url = "/career"
+weight = 6
+
 
 [markup]
   [markup.tableOfContents]
     endLevel = 4
     ordered = false
     startLevel = 2
+  [markup.goldmark.renderer]
+    unsafe = true
 
 [params]
 
@@ -45,7 +57,7 @@ weight = 3
   googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
 
   # Home page settings
-  description = "Hi there! My name is Gianluca Scarpellini and I'm a PhD student at the Italian Institute of Technolgy. I'm passionate about computer vision, research, and books!"
+  description = "Hi there! My name is Gianluca Scarpellini. I'm a Research Scientist at Genesis Therapeutics working on generative models for structural biology, after a PhD in computer vision and RL at the Italian Institute of Technology and a research internship at Google DeepMind. I'm passionate about machine learning, research, and books!"
   showAllPostsOnHomePage = true # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
   tagsOverview = false # show tags overview by default.
@@ -72,5 +84,8 @@ weight = 3
     name = "linkedin"
     link = "https://www.linkedin.com/in/gianlucascarpellini"
   [[params.social]]
+    name = "scholar"
+    link = "https://scholar.google.com/citations?user=Wlye2XUAAAAJ"
+  [[params.social]]
     name = "email"
-    link = "gianluca@scarpellini.dev"  # no need for "mailto:" in the head
+    link = "gianluca [at] scarpellini [dot] dev"  # obfuscated to deter scrapers; rendered as plain text, not a mailto link
