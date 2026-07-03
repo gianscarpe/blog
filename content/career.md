@@ -75,7 +75,7 @@ below the chart.
     <rect x="723.3" y="314" width="12" height="12" transform="rotate(45 729.3 320)"><title>Re-assembling the Past: The RePAIR Dataset &mdash; NeurIPS, Sep 2024</title></rect>
     <rect x="761.8" y="314" width="12" height="12" transform="rotate(45 767.8 320)"><title>Condensation of Force Field Parameters from ML Predicted Distributions &mdash; JCIM, Jan 2025</title></rect>
     <rect x="800.4" y="314" width="12" height="12" transform="rotate(45 806.4 320)"><title>Pearl: A Foundation Model for Placing Every Atom in the Right Location &mdash; arXiv, May 2025</title></rect>
-    <rect x="838.9" y="314" width="12" height="12" transform="rotate(45 844.9 320)"><title>Triangle Multiplication Is All You Need &mdash; arXiv, Sep 2025</title></rect>
+    <rect x="877.3" y="314" width="12" height="12" transform="rotate(45 883.3 320)"><title>Triangle Multiplication is All You Need &mdash; ICLR, 2026</title></rect>
     <rect x="925.4" y="314" width="12" height="12" transform="rotate(45 931.4 320)"><title>Few-step Cofolding with All-Atom Flow Maps &mdash; arXiv, Jun 2026</title></rect>
   </g>
   <!-- legend -->

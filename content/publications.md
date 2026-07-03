@@ -15,10 +15,10 @@ Full, up-to-date list also available on [Google Scholar](https://scholar.google.
 #### 2026 {#y2026}
 
 -   **Few-step Cofolding with All-Atom Flow Maps**. arXiv preprint, 2026.
+-   **Triangle Multiplication is All You Need for Biomolecular Structure Representations**. J. Ouyang-Zhang, G. Scarpellini, et al. _ICLR_, 2026.
 
 #### 2025 {#y2025}
 
--   **Triangle Multiplication Is All You Need For Biomolecular Structure Representations**. arXiv preprint, 2025.
 -   **Pearl: A Foundation Model for Placing Every Atom in the Right Location**. arXiv preprint, 2025.
 -   **Condensation of Force Field Parameters from Machine Learning Predicted Distributions**. D. Bonanni, Y. Zhang, G. Scarpellini, et al. _Journal of Chemical Information and Modeling_, 2025.
 
