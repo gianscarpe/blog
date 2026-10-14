@@ -1,7 +1,7 @@
 +++
 title = "Publications"
 author = ["Gianluca Scarpellini"]
-lastmod = 2026-07-02T00:00:00+01:00
+lastmod = 2026-10-14T00:00:00-04:00
 weight = 2001
 noauthor = true
 nocomment = true
@@ -14,7 +14,7 @@ Full, up-to-date list also available on [Google Scholar](https://scholar.google.
 
 #### 2026 {#y2026}
 
--   **Few-step Cofolding with All-Atom Flow Maps**. arXiv preprint, 2026.
+-   [**Few-step Cofolding with All-Atom Flow Maps (DeCAF)**](https://arxiv.org/abs/2606.08375). G. Scarpellini, R. Shprints, P. Holderrieth, et al. _NeurIPS 2026 Spotlight_. [Code](https://github.com/genesistherapeutics/decaf). In the 2026 main track, 292 of 7,900 accepted papers were Spotlights (3.7%; 0.95% of 30,709 submissions). [Selection statistics](https://mi-6.co.jp/en/news/20260916/).
 -   **Triangle Multiplication is All You Need for Biomolecular Structure Representations**. J. Ouyang-Zhang, G. Scarpellini, et al. _ICLR_, 2026.
 
 #### 2025 {#y2025}

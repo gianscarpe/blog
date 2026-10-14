@@ -1,6 +1,11 @@
 {
     "list": [
         {
+            "name": "Paper accepted!",
+            "date": "2026-09",
+            "desc": "[DeCAF: Few-step Cofolding with All-Atom Flow Maps](https://arxiv.org/abs/2606.08375) was accepted as a NeurIPS 2026 Spotlight. Spotlights were 3.7% of accepted main-track papers this year (292 of 7,900). [Code](https://github.com/genesistherapeutics/decaf)."
+        },
+        {
             "name": "Preprint",
             "date": "2026-06",
             "desc": "New preprint from Genesis Therapeutics: Few-step Cofolding with All-Atom Flow Maps."
@@ -71,9 +76,9 @@
             "desc": "I started a PhD on RL and computer vision at Istituto Italiano di Tecnologia"
         },
         {
-            "name": "Pytorch Lightning Contributor",
+            "name": "PyTorch Lightning contributor",
             "date": "2020-09",
-            "desc": "I started contributing to the pytorch-lightning ecoysystem"
+            "desc": "I contributed to the PyTorch Lightning ecosystem from 2020 to 2023."
         }
     ]
 }
